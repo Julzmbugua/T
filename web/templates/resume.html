@@ -1,0 +1,26 @@
+{% load static %}
+<div class="container-fluid bg-3 text-center">
+  <!-- <h3 class="margin">WHAT I CAN DO</h3><br> -->
+  <div class="row">
+
+    <div class="col-sm-4 text-left">
+    	<h3>TECHNOLOGIES</h3>
+      <hr class="border-grey" style=""><br>
+    </div>
+    <div class="col-sm-4 text-left">
+      <h3>DAY-TO-DAY COMFORT</h3>
+      <hr class="border-grey" style=""><br>
+        {% for i in comfort_item %}
+		      <li> {{ i.item }} </li>
+        {% endfor %}
+
+    </div>
+    <div class="col-sm-4 text-left">
+      <h3>EXPERIENCE WITH </h3>
+      <hr class="border-grey" style=""><br>
+      {% for item in experience_list %}
+  		<li>{{ item.entry }}</li>
+      {% endfor %}
+    </div>
+  </div>
+</div>

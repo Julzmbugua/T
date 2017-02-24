@@ -1,0 +1,14 @@
+<<<<<<< HEAD
+dj-database-url==0.4.2
+dj-static==0.0.6
+Django==1.10.5
+django-hosts==2.0
+django-toolbelt==0.0.1
+gunicorn==19.6.0
+olefile==0.44
+Pillow==4.0.0
+psycopg2==2.6.2
+static3==0.7.0
+=======
+Django==1.10.2
+>>>>>>> 61cb569420e133f411954e43cf29114568b8b775
