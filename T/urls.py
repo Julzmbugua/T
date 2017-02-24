@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
-<<<<<<< HEAD
 from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
@@ -25,10 +24,8 @@ urlpatterns = [
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += staticfiles_urlpatterns()
-=======
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('web.urls')),
 ]
->>>>>>> 61cb569420e133f411954e43cf29114568b8b775

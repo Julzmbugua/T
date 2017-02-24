@@ -1,6 +1,5 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-<<<<<<< HEAD
 from .models import About, CarouselCaption, Comfort, PortfolioGraphic,\
  ExperienceWith, CarouselCover
 
@@ -38,7 +37,6 @@ def homepage(request):
 		}
 	return render(request, 'layout.html', context)
 	
-=======
 
 
 # Create your views here.
@@ -49,4 +47,3 @@ def homepage(request):
 def contact(request):
 
 	return render(request, 'contact.html')
->>>>>>> 61cb569420e133f411954e43cf29114568b8b775
