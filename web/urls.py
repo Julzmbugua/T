@@ -13,6 +13,3 @@ urlpatterns = [
 	# url(r'^contact/$', views.contact, name='contact'),
 ]
 
-	url(r'^', views.homepage, name='homepage'),
-	url(r'^contact/$', views.contact, name='contact')
-
