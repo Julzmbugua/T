@@ -12,11 +12,11 @@
     font-style: normal;
 
 }
-img {
-  /*filter: grayscale(60);*/
+a {
+  filter: grayscale(60) !important;
 }
 .web {
-  filter: grayscale(60);
+  /*filter: grayscale(60);*/
 
   font-family: 'Josefin Sans', sans-serif;
             }
