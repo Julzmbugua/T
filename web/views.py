@@ -6,7 +6,7 @@ from .models import About, CarouselCaption, Comfort, PortfolioGraphic,\
 # Create your views here.
 def homepage(request):
 	# Home
-	cover_img = CarouselCover.objects.order_by('upload_date')[0]
+	# cover_img = CarouselCover.objects.order_by('upload_date')[0]
 	caption_item = CarouselCaption.objects.order_by('publish_date')[0]
 	caption_item_1 = CarouselCaption.objects.order_by('publish_date')[1]
 	caption_item_2 = CarouselCaption.objects.order_by('publish_date')[2]
@@ -32,18 +32,7 @@ def homepage(request):
 		'graphic_item': graphic_item,
 		'graphic_item_1': graphic_item_1,
 		'graphic_item_2': graphic_item_2,
-		'experience_list': experience_list,
-		'cover_img': cover_img
+		'experience_list': experience_list
 		}
 	return render(request, 'layout.html', context)
 	
-
-
-# Create your views here.
-def homepage(request):
-
-	return render(request, 'homepage.html')
-
-def contact(request):
-
-	return render(request, 'contact.html')
