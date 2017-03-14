@@ -125,3 +125,6 @@ MEDIA_ROOT = 'web/static/images/'
 MEDIA_URL = '/uploads/'
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'web/static', 'static_root')
+
+import dj_database_url
+DATABASES['default'] =  dj_database_url.config()
