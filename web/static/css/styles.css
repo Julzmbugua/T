@@ -12,11 +12,9 @@
     font-style: normal;
 
 }
-a {
-  filter: grayscale(60) !important;
-}
+
 .web {
-  /*filter: grayscale(60);*/
+  filter: grayscale(60);
 
   font-family: 'Josefin Sans', sans-serif;
             }
@@ -123,6 +121,8 @@ a {
 
 
 .carousel-caption {
+  background: rgba(0,0,0,0.4);
+  height: inherit !important;
   margin-top: 100px;
   font-size: 56px !important;
   /*font-style: italic;*/
