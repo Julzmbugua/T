@@ -48,14 +48,10 @@
 
 .navbar {
   margin-top: 25px;
-  /*display: none;*/
   background: transparent!important;
   border: none !important;
-  font-weight: bold !important;
-  color: #000 !important;
 }
 .navbar-visible {
-  color: #ff0!important;
   padding: 5px;
   margin-top: 0;
   font-weight: bold !important;
@@ -68,6 +64,9 @@
   box-shadow: 0 2px 3px rgba(0,0,0,.1);
 }
 .navbar li > a {
+  color: #fff!important;
+}
+.navbar-visible li > a {
   color: #000!important;
 }
 .navbar .navbar-nav > .active > a {
@@ -107,6 +106,14 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+}
+
+.blur-back {
+  background: rgba(0,0,0,0.9);
+  width: 100%;
+  min-height: 650px;
+  position: absolute;
+  /*margin-left: -15px*/
 }
 
 .carousel .item-1 {
@@ -338,13 +345,10 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 .parallax {
   /* The image used */
-
-
+   background-image: url("../images/homepage/coding.jpg");
   /* Set a specific height */
   min-height: 650px;
   /*max-height: 600px;*/
-  background-image: url("../images/homepage/coding.jpg");
-
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -353,12 +357,25 @@ now override the 3.3 new styles for modern browsers & apply opacity
 }
 
 .resume-content {
+  background: rgba(0,0,0,0.9);
+  width: 100%;
+  min-height: 650px;
+  position: absolute;
+  margin-left: -15px;
+}
+
+.resume-content li {
   margin-top: 80px;
   background-color:transparent;
   font-size:16px;
   color: #f7f7f7;
 }
-
+.resume-content h3 {
+  margin-top: 80px;
+  background-color:transparent;
+  font-size:16px;
+  color: #f7f7f7;
+}
 
 
 
