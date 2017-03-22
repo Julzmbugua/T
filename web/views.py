@@ -12,7 +12,7 @@ def homepage(request):
 	caption_item_2 = CarouselCaption.objects.order_by('publish_date')[2]
 
 	#About
-	bio_desc = About.objects.order_by('publish_date')[1]
+	bio_desc = About.objects.order_by('publish_date')[0]
 
 	#Resume
 	comfort_item = Comfort.objects.all()
