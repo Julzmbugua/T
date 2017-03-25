@@ -10,22 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="{% static 'js/bootstrap.min.js' %}"> </script>
-        <script type="text/javascript">
-          $(function() {
-            //caches a jQuery object containing the header element
-            var header = $('.navbar');
-            $(window).scroll(function() {
-              var scroll = $(window).scrollTop();
-
-              if (scroll >= 600) {
-                header.removeClass('.navbar').addClass('navbar-visible').fadeIn();
-              }
-              else {
-                header.removeClass('navbar-visible').addClass('.navbar').fadeIn();
-              }
-            });
-          });
-        </script>
+        <script src="{% static 'js/web.js' %}"></script>
     </head>
 
     <body class="web" data-spy="scroll" data-target=".navbar" data-offset="100">
