@@ -381,14 +381,14 @@ now override the 3.3 new styles for modern browsers & apply opacity
 }
 
 .resume-content li {
-  margin-top: 80px;
+  margin-top: 20px;
   background-color:transparent;
   text-align: center;
   font-size:16px;
   color: #f7f7f7;
 }
 .resume-content h3 {
-  margin-top: 80px;
+  margin-top: 20px;
   background-color:transparent;
   text-align: center;
   font-size:16px;
