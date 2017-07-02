@@ -430,7 +430,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
   position: relative;
   padding:70px;
   /*min-height: 1200px;*/
-  max-height:100px;
+  max-height:150px;
   background-color: #000;
   color: #fff;
   font-size: 20px !important;
