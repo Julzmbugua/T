@@ -428,7 +428,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 #contact {
   /*top: 600px;*/
   position: relative;
-  padding:70px;
+  padding:10px;
   /*min-height: 1200px;*/
   max-height:150px;
   background-color: #000;
