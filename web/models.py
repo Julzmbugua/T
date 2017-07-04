@@ -1,6 +1,10 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.core.files.storage import FileSystemStorage
+
+
+fs = FileSystemStorage(location='media/')
 
 # Create your models here.
 class CarouselCaption(models.Model):
@@ -33,14 +37,14 @@ class ExperienceWith(models.Model):
 		return self.entry
 
 class PortfolioGraphic(models.Model):
-	graphic = models.ImageField(upload_to = "portfolio")
+	graphic = models.ImageField(storage = fs)
 	upload_date = models.DateTimeField()
 
 	def __str__(self):
 		return self.graphic.url
 
 class CarouselCover(models.Model):
-	cover = models.ImageField(upload_to = "homepage")
+	cover = models.ImageField(storage = fs)
 	upload_date = models.DateTimeField()
 
 	def __str__(self):
