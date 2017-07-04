@@ -73,16 +73,16 @@ WSGI_APPLICATION = 'T.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd25ck31jvd4p8m',
-        'USER': 'prtjluvdnhsanj',
-        'PASSWORD': 'c6d93658711194e815a70abe33fa912978508ec16550b89b6f7285e76906e9fc',
-        'HOST': 'ec2-23-21-204-166.compute-1.amazonaws.com',
-        'PORT': '5432',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'd25ck31jvd4p8m',
+#         'USER': 'prtjluvdnhsanj',
+#         'PASSWORD': 'c6d93658711194e815a70abe33fa912978508ec16550b89b6f7285e76906e9fc',
+#         'HOST': 'ec2-23-21-204-166.compute-1.amazonaws.com',
+#         'PORT': '5432',
+#     }
+# }
 
 
 
@@ -130,5 +130,5 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "media"),
     )
 
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config(default=os.getenv('DATABASE_URL'))
+# import dj_database_url
+# DATABASES['default'] =  dj_database_url.config(default=os.getenv('DATABASE_URL'))
