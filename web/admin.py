@@ -10,7 +10,7 @@ class PortfolioGraphicAdmin(admin.ModelAdmin):
 	list_display = ('graphic', 'upload_date')		
 
 class CarouselCoverAdmin(admin.ModelAdmin):
-	list_display = ('cover', 'upload_date', 'displayed')
+	list_display = ('upload_date', 'displayed')
 
 
 admin.site.register(CarouselCaption, CarouselCaptionAdmin)
