@@ -52,7 +52,9 @@
 
               <!-- Wrapper for slides -->
               <div class="carousel-inner">
-                <div class="item active item-1">
+                <div class="item active item-1" style="background-image: url({{cover_img.cover.url}});">
+                  <!-- <img src="{{ cover_img.cover.url }}"> -->
+
                   <div class="blur-back">
                     <div class="carousel-caption">
                     <p>{{ caption_item.caption }} . {{ caption_item_1.caption }}</p>
@@ -64,9 +66,8 @@
                 </div>
                     
                   </div>
-                  <!-- <img src="{{ cover_img.cover.url }}"> -->
-
-                <div class="item item-2">
+                  
+                <div class="item item-2" style="background-image: url({{cover_img_1.cover.url}})">
                   <div class="blur-back">
 
                     <div class="carousel-caption">
@@ -77,9 +78,8 @@
                   </div>
                 </div>
 
-                <div class="item item-3">
+                <div class="item item-3" style="background-image: url({{cover_img_2.cover.url}});">
                   <div class="blur-back">
-
 
                     <div class="carousel-caption">
                       <p>{{ caption_item_2.caption }}</p>

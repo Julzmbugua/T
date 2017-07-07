@@ -126,7 +126,7 @@
 }
 
 .carousel .item-1 {
-  background-image: url("../images/homepage/coding.jpg");
+  background-image: url('cover_img.cover.url');
 }
 .carousel .item-2 {
   background-image: url("../images/homepage/coding.jpg");

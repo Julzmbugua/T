@@ -1,15 +1,24 @@
 from django.contrib import admin
-from .models import CarouselCaption, About, Comfort, ExperienceWith, PortfolioGraphic, CarouselCover
-
+from .models import *
 
 
 # Register your models here.
-admin.site.register(CarouselCaption)
+class CarouselCaptionAdmin(admin.ModelAdmin):
+	list_display = ('caption', 'publish_date')		
+
+class PortfolioGraphicAdmin(admin.ModelAdmin):
+	list_display = ('graphic', 'upload_date')		
+
+class CarouselCoverAdmin(admin.ModelAdmin):
+	list_display = ('cover', 'upload_date', 'displayed')
+
+
+admin.site.register(CarouselCaption, CarouselCaptionAdmin)
 admin.site.register(About)
 admin.site.register(Comfort)
 admin.site.register(ExperienceWith)
-admin.site.register(PortfolioGraphic)
-admin.site.register(CarouselCover)
+admin.site.register(PortfolioGraphic, PortfolioGraphicAdmin)
+admin.site.register(CarouselCover, CarouselCoverAdmin)
 
 # Register your models here.
 

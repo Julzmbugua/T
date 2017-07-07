@@ -44,8 +44,9 @@ class PortfolioGraphic(models.Model):
 		return self.graphic.url
 
 class CarouselCover(models.Model):
-	cover = models.ImageField(storage = fs)
+	cover = models.ImageField(upload_to ='backgrounds')
 	upload_date = models.DateTimeField()
+	displayed = models.BooleanField()
 
 	def __str__(self):
 		return self.cover.url
