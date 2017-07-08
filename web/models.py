@@ -37,7 +37,9 @@ class ExperienceWith(models.Model):
 		return self.entry
 
 class PortfolioGraphic(models.Model):
+	site_name = models.CharField(max_length=100)
 	graphic = models.ImageField(storage = fs)
+	site_url = models.URLField(max_length=100)
 	upload_date = models.DateTimeField()
 
 	def __str__(self):
