@@ -88,6 +88,7 @@
 .navbar-toggle {
   border: none !important;
   color: #000 !important;
+  float: left !important;
 }
 .navbar .icon-bar {
   height: 4px !important;
@@ -125,7 +126,7 @@
   /*margin-left: -15px*/
 }
 
-.carousel .item-1 {
+/*carousel .item-1 {
   background-image: url('cover_img.cover.url');
 }
 .carousel .item-2 {
@@ -133,7 +134,7 @@
 }
 .carousel .item-3 {
   background-image: url("../images/homepage/coding.jpg");
-}
+}*/
 
 
 .carousel-caption {

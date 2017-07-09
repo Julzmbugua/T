@@ -4,12 +4,13 @@ from django.db import models
 from django.core.files.storage import FileSystemStorage
 
 
-fs = FileSystemStorage(location='media/')
+fs = FileSystemStorage(location='web/media/')
 
 # Create your models here.
 class CarouselCaption(models.Model):
 	caption = models.CharField(max_length=100)
 	publish_date = models.DateField()
+	caption_no = models.IntegerField()
 
 	def __str__(self):
 		return self.caption

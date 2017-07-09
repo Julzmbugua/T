@@ -4,7 +4,7 @@ from .models import *
 
 # Register your models here.
 class CarouselCaptionAdmin(admin.ModelAdmin):
-	list_display = ('caption', 'publish_date')		
+	list_display = ('caption', 'caption_no', 'publish_date')		
 
 class PortfolioGraphicAdmin(admin.ModelAdmin):
 	list_display = ('site_name', 'site_url', 'graphic', 'upload_date')		
