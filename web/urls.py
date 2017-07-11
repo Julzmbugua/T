@@ -10,10 +10,9 @@ urlpatterns = [
 
 	url(r'^$', views.homepage, name='homepage'),
 	# url(r'^portfolio/$', views.portfolio, name='portfolio'),
-	# url(r'^about/$', views.about_page, name='about_page'),
-	# url(r'^resume/$', views.resume, name='resume'),
-	# url(r'^blog/$', views.blog, name='blog'),
+	# url(r'^about/$', views.about, name='about'),
+	# url(r'^resume/$', views.resume, name='resume'),	
+	url(r'^blog/$', views.BlogCreate.as_view(), name='blog-add')
 	# url(r'^contact/$', views.contact, name='contact'),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-urlpatterns += staticfiles_urlpatterns()
+] 
 

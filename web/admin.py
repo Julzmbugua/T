@@ -7,10 +7,10 @@ class CarouselCaptionAdmin(admin.ModelAdmin):
 	list_display = ('caption', 'caption_no', 'publish_date')		
 
 class PortfolioGraphicAdmin(admin.ModelAdmin):
-	list_display = ('site_name', 'site_url', 'graphic', 'upload_date')		
+	list_display = ('site_name', 'site_url', 'graphic', 'graphic_no', 'upload_date')		
 
 class CarouselCoverAdmin(admin.ModelAdmin):
-	list_display = ('upload_date', 'displayed')
+	list_display = ('alt', 'upload_date', 'slide')
 
 
 admin.site.register(CarouselCaption, CarouselCaptionAdmin)

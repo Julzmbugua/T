@@ -17,11 +17,12 @@
   filter: grayscale(60);
 
   font-family: 'Josefin Sans', sans-serif;
-            }
+}
+.huge_caption {font-size: 100px !important; font-weight: bold;}
 
 @keyframes fadein {
     from {
-        opacity:0;
+        opacity:0.2;
     }
     to {
         opacity:1;
@@ -29,7 +30,7 @@
 }
 @-moz-keyframes fadein { /* Firefox */
     from {
-        opacity:0;
+        opacity:0.2;
     }
     to {
         opacity:1;
@@ -37,7 +38,7 @@
 }
 @-webkit-keyframes fadein { /* Safari and Chrome */
     from {
-        opacity:0;
+        opacity:0.2;
     }
     to {
         opacity:1;
@@ -176,7 +177,7 @@
     border-bottom: solid;
     box-shadow: 0 2px 3px rgba(0,0,0,.1);
   }
-.navbar-visible li > a {
+  .navbar-visible li > a {
     color: #000!important;
   }
 
@@ -187,7 +188,18 @@
   .btn {
   padding: 5px 22px !important;
   font-size: 6px;
-}
+  }
+  .huge_caption {font-size: 50px !important}
+
+  .carousel-portfolio img {
+    -webkit-filter: blur(2px);
+    filter: blur(2px)
+  }
+  .carousel-portfolio .carousel-portfolio-caption {
+    margin-bottom: 30px !important;
+    margin-left: 0px;
+    visibility: visible;
+  }
 }
 
 /*PORTFOLIO CAROUSEL*/
@@ -198,6 +210,10 @@
 .carousel-portfolio:hover img {
   -webkit-filter: blur(4px);
   filter: blur(4px);
+  animation: fadein 1s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari and Chrome */
+    -o-animation: fadein 1s; /* Opera */
 
 }
 h3 {
@@ -212,10 +228,7 @@ h3 {
   /*width: 100%;*/
   margin-left: 0px;
   visibility: hidden;
-  animation: fadein 6s;
-    -moz-animation: fadeout 6s; /* Firefox */
-    -webkit-animation: fadeout 6s; /* Safari and Chrome */
-    -o-animation: fadeout 6s; /* Opera */
+  
   /*background-color: #fff;*/
 }
 .carousel-portfolio:hover .carousel-portfolio-caption {
@@ -225,6 +238,10 @@ h3 {
 }
 .carousel-portfolio:hover .carousel-portfolio-caption > p {
   /*color: #FF0 !important;*/
+  animation: fadein 3s;
+    -moz-animation: fadein 3s; /* Firefox */
+    -webkit-animation: fadein 3s; /* Safari and Chrome */
+    -o-animation: fadein 3s; /* Opera */
 
 }
 .carousel-fade .carousel-inner .item {
@@ -282,7 +299,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 /*BUTTONS*/
 
-.btn-carousel {
+.btn-carousel, .btn-portfolio {
   background-color: transparent; /* Green */
   color: #fff !important;
   border: solid !important;
@@ -303,19 +320,6 @@ now override the 3.3 new styles for modern browsers & apply opacity
   color: #000 !important;
 }
 
-.btn-portfolio {
-  background-color: transparent; /* Green */
-  color: #fff !important;
-  border: solid !important;
-  border-color: #fff !important;
-  /*padding: 15px 32px !important;*/?
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px !important;
-  /*margin-bottom: -100px !important;*/
-}
-
 /*PAGES*/
 #home {
   /*position: absolute;*/
@@ -323,41 +327,34 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 }
 
-#portfolio {
+#portfolio, #about, #blog{
   /*top: 660px;*/
   position: relative;
   padding-top:50px;
   min-height:1000px;
-  color: #000;
   font-size: 16px;
-  background-color: #fff;
-  /*background-image: url('homepage.jpg');*/
   background-image: no-repeat;
-  /*filter: grayscale(60);*/
   background-size: 100%;
   margin: auto;
  }
  .col-sm-4 {
-  padding: 5px;
+  padding: 50px;
+}
+#portfolio {
+  background-color: #fff;
+  color: #000;
 }
 
 #about {
-  /*top: 600px;*/
-  position: relative;
-  padding-top:50px;
-  /*min-height: 1200px;*/
-  max-height:1000px;
   background-color: #000;
-  color: #fff;
-  font-size: 20px !important;
-  background-image: no-repeat;
-  /*filter: grayscale(60);*/
-  background-size: 100%;
-  margin: auto
+  color: #fef3f3;
+  min-height: 600px;
+  
 }
 
-#resume {
-
+#blog {
+  background-color: #000;
+  color: #000;
 }
 
 .parallax {

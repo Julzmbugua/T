@@ -41,15 +41,26 @@ class PortfolioGraphic(models.Model):
 	site_name = models.CharField(max_length=100)
 	graphic = models.ImageField(storage = fs)
 	site_url = models.URLField(max_length=100)
+	graphic_no = models.IntegerField(unique=True)
 	upload_date = models.DateTimeField()
 
 	def __str__(self):
 		return self.graphic.url
 
 class CarouselCover(models.Model):
+	alt = models.CharField(max_length=10)
 	cover = models.ImageField(upload_to ='backgrounds')
 	upload_date = models.DateTimeField()
-	displayed = models.BooleanField()
+	slide = models.IntegerField()
 
 	def __str__(self):
 		return self.cover.url
+class Blog(models.Model):
+    blog_title = models.CharField(max_length=100)
+    blog_content = models.TextField(max_length=1000)
+    publish_date = models.DateTimeField()
+    def __str__(self):
+		return self.blog_title + '-' + self.blog_contentl
+    
+    def get_absolute_url(self):
+    	return reverse('web:blog', kwargs={'pk:self.pk'})

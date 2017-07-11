@@ -1,18 +1,20 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import About, CarouselCaption, Comfort, PortfolioGraphic,\
- ExperienceWith, CarouselCover
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.core.urlresolvers import reverse_lazy
+from .models import *
+from .forms import *
 
 # Create your views here.
 def homepage(request):
 	# Home
-	cover_img = CarouselCover.objects.filter(displayed=True).order_by('upload_date')[0]
-	cover_img_1 = CarouselCover.objects.filter(displayed=True).order_by('upload_date')[1]
-	cover_img_2	 = CarouselCover.objects.filter(displayed=True).order_by('upload_date')[2]
-	caption_item = CarouselCaption.objects.order_by('publish_date')[0]
-	caption_item_1 = CarouselCaption.objects.filter(caption_no=2)
-	caption_item_2 = CarouselCaption.objects.filter(caption_no=3)
-	caption_item_3 = CarouselCaption.objects.filter(caption_no=4)
+	cover_img = CarouselCover.objects.get(slide = 0)	
+	cover_img_1 = CarouselCover.objects.get(slide = 1)
+	cover_img_2	 = CarouselCover.objects.get(slide = 2)
+	caption_item = CarouselCaption.objects.get(caption_no = 1)
+	caption_item_1 = CarouselCaption.objects.get(caption_no = 2)
+	caption_item_2 = CarouselCaption.objects.get(caption_no = 3)
+	caption_item_3 = CarouselCaption.objects.get(caption_no = 4)
 
 
 	#About
@@ -23,17 +25,16 @@ def homepage(request):
 	experience_list = ExperienceWith.objects.all()
 
 	# Portfolio
-	graphic_item = PortfolioGraphic.objects.order_by('upload_date')[0]
-	graphic_item_1 = PortfolioGraphic.objects.order_by('upload_date')[1]
-	graphic_item_2 = PortfolioGraphic.objects.order_by('upload_date')[2]
+	graphic_item = PortfolioGraphic.objects.get(graphic_no = 0)
+	graphic_item_1 = PortfolioGraphic.objects.get(graphic_no = 1)
+	graphic_item_2 = PortfolioGraphic.objects.get(graphic_no = 2)
 
 
 	context = {
 		'cover_img':cover_img,
-		'caption_item': caption_item,
 		'cover_img_1':cover_img_1,
 		'cover_img_2':cover_img_2,
-
+		'caption_item': caption_item,
 		'caption_item_1': caption_item_1,
 		'caption_item_2': caption_item_2,
 		'caption_item_3': caption_item_3,
@@ -46,3 +47,19 @@ def homepage(request):
 		}
 	return render(request, 'layout.html', context)
 	
+class BlogCreate(CreateView):
+	model = Blog
+	fields = ['blog_title', 'blog_content', 'publish_date']	
+
+
+
+class BlogUpdate(CreateView):
+	model = Blog
+	fields = ['blog_title', 'blog_content', 'publish_date']	
+
+
+class BlogDelete(DeleteView):
+	model = Blog
+	# fields = ['blog_title', 'Blog_content', 'publish_date']	
+	sucess_url = reverse_lazy('web:homepage')
+

@@ -31,7 +31,7 @@
                   <li><a href="#about">ABOUT</a></li>
                   <li><a href="#resume"> RESUME </a></li>
                   <li><a href="#portfolio">PORTFOLIO</a></li>
-                  <li><a href="https://medium.com/tito-mbugua"> BLOG </a></li>
+                  <li><a href="{% url 'web:blog-add' %}"> BLOG </a></li>
                   <li><a href="#contact"> CONTACT </a></li>
 
                     <!-- WITHOUT SCROLLSPY -->
@@ -57,8 +57,8 @@
 
                   <div class="blur-back">
                     <div class="carousel-caption">
-                    <p>{{ caption_item.caption }}</p>
-                    <p>{{ caption_item_1.caption }} . {{ caption_item_2.caption }}</p>
+                    <p class="huge_caption">{{ caption_item.caption }}</p>
+                    <p style="font-size: 15px !important; font-style: italic;">{{ caption_item_1.caption }} . {{ caption_item_2.caption }} . {{ caption_item_3.caption }}</p>
 
 
                                           <!-- <hr class="border-grey" style="margin:auto;width:20%"><br> -->
@@ -127,15 +127,10 @@
 
           <!-- BLOG -->
 
-       <!--  <div id="blog" class="container-fluid">
-          {% include "blog.html" %}
-        </div> -->
-
-          <!-- CONTACT -->
-
+              <!-- CONTACT -->
         <div id="contact" class="container-fluid">
           {% include "contact.html" %}
         </div>
       </div>
-    </body>
+   </body>
   </html>
