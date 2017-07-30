@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_markdown',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = 'web/static/'
 MEDIA_URL = '/'
 MEDIA_ROOT = 'web/media/'
+
+
+# Markdown
+MARKDOWN_EDITOR_SKIN = 'simple'

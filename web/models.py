@@ -1,7 +1,9 @@
 from __future__ import unicode_literals
-
+import datetime
+from django.urls import reverse
 from django.db import models
 from django.core.files.storage import FileSystemStorage
+from django_markdown.models import MarkdownField
 
 
 fs = FileSystemStorage(location='web/media/')
@@ -55,12 +57,25 @@ class CarouselCover(models.Model):
 
 	def __str__(self):
 		return self.cover.url
+
+class BlogQuerySet(models.QuerySet):
+	def published(self):
+		return self.filter(publish=True)
 class Blog(models.Model):
     blog_title = models.CharField(max_length=100)
-    blog_content = models.TextField(max_length=1000)
-    publish_date = models.DateTimeField()
+    blog_content = MarkdownField()
+    slug = models.SlugField(max_length=200, unique=True)
+    publish = models.BooleanField(default=True)
+    created = models.DateTimeField(auto_now_add=True)
+    modified = models.DateTimeField(auto_now=True)
+
+    objects = BlogQuerySet.as_manager()
+
     def __str__(self):
-		return self.blog_title + '-' + self.blog_contentl
-    
+		return self.blog_title + '-' + self.blog_content
+    class Meta:
+        verbose_name = "Blog Entry"
+        verbose_name_plural = "Blog Entries"
+        ordering = ["-created"]
     def get_absolute_url(self):
-    	return reverse('web:blog', kwargs={'pk:self.pk'})
+    	return reverse('web:blog-detail', kwargs={'pk':self.pk})

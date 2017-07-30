@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% load django_markdown %}
+{% block content %}
+
+{% block blog_entries %}
+<div class="container-fluid bg-2 text-center">	    
+	{% for object in object_list %}
+
+	<div class="row">
+		<div class="col-sm-6">
+			<div class="card">
+				<h2><a href="detail/{{object.id}}/">{{ object.blog_title }}</a> </h2>
+				<p class ="meta">{{ object.created }} </p>
+				{{ object.blog_content|markdown|safe }}
+			</div>
+		</div>
+
+{% endfor %}
+	</div>
+{% endblock %}
+</div>
+{% endblock%}

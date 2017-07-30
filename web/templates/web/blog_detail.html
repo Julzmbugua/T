@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load static %}
+<!-- {% load django_markdown %} -->
+{% block title %} Blog {% endblock %}
+
+{% block content %}
+<div class="container-fluid bg-1" style="text-align: justify;">
+	<div id="blog">
+		<!-- <h3 class="margin"> BLOG </h3> -->
+		<hr class="border" style="margin:auto;width:20%;color:#fff"><br>
+		<h2 style="text-align: center;">{{object.blog_title}}</h2>
+		<p class ="meta" style="text-align: center;">{{ object.created }} </p>
+		<div class="blog-content" style="text-align: justify">{{ object.blog_content|markdown }}</div>
+
+	</div>
+
+</div>
+
+
+
+
+{% block blog_entries %}
+{% for object in object_list %}
+<div class="post">
+	<h2>{{ object.blog_title }} </h2>
+	<p class ="meta">{{ object.created }} </p>
+	
+</div>
+{% endfor %}
+{% endblock %}
+{% endblock %}

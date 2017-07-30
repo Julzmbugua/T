@@ -2,7 +2,7 @@
 <!DOCTYPE html>
   <html lang="en">
     <head>
-      <title>T</title>
+      <title>{% block title %} {% endblock %} </title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href=" {% static 'css/styles.css' %}">
@@ -10,12 +10,11 @@
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="{% static 'js/bootstrap.min.js' %}"> </script>
-        <script src="{% static 'js/web.js' %}"></script>
     </head>
 
     <body class="web" data-spy="scroll" data-target=".navbar" data-offset="100">
 
-    	 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+       <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
           <div class="container-fluid">
             <div class="navbar-header">
               <div class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -27,8 +26,8 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#home">HOME</a></li>
-                  <li><a href="{% url 'web:about' %}">ABOUT</a></li>
+                  <li><a href="{% url 'web:homepage' %}">HOME</a></li>
+                  <li><a href="#about">ABOUT</a></li>
                   <li><a href="#resume"> RESUME </a></li>
                   <li><a href="#portfolio">PORTFOLIO</a></li>
                   <li><a href="{% url 'web:blog' %}"> BLOG </a></li>
@@ -39,7 +38,11 @@
               </div>
           </div>
         </nav>
-        {% block content %}
-        {% endblock %}
-    </body>
+        <div id="blog" class="container-fluid">
+          {% block content %}
+          {% endblock %}
+        
+        </div>
+        
+   </body>
   </html>

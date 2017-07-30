@@ -7,7 +7,8 @@ class BlogForm(ModelForm):
 		fields = [
 		'blog_title',
 		'blog_content',
-		'publish_date'
+                'publish',
+                'slug',		
 		]
 
 

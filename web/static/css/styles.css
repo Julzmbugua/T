@@ -64,6 +64,22 @@
   border-bottom: solid;
   box-shadow: 0 2px 3px rgba(0,0,0,.1);
 }
+.navbar-base {
+  padding: 5px;
+  margin-top: 0;
+  font-weight: bold !important;
+  /*min-height: 80px !important;*/
+  opacity: 0.;
+  background-color: #fff !important;
+  /*border: none !important;*/
+  /*font-size: 23px !important;*/
+  border-bottom: solid;
+  box-shadow: 0 2px 3px rgba(0,0,0,.1);
+}
+.navbar-base li > a {
+  color: #000!important;
+  
+}
 .navbar li > a {
   color: #fff!important;
 }
@@ -417,7 +433,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 /* Add some padding inside the card container */
 .card-container {
-  /*padding: 2px 16px;*/
+  padding: 33px 56px !important;
 }
 
 

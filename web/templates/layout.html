@@ -31,7 +31,7 @@
                   <li><a href="#about">ABOUT</a></li>
                   <li><a href="#resume"> RESUME </a></li>
                   <li><a href="#portfolio">PORTFOLIO</a></li>
-                  <li><a href="{% url 'web:blog-add' %}"> BLOG </a></li>
+                  <li><a href="{% url 'web:blog' %}"> BLOG </a></li>
                   <li><a href="#contact"> CONTACT </a></li>
 
                     <!-- WITHOUT SCROLLSPY -->
@@ -39,7 +39,7 @@
               </div>
           </div>
         </nav>
-
+        {% block content %}
         <!-- HOME -->
         <div id="home" class="carousel slide carousel-fade" data-ride="carousel" >
 
@@ -131,6 +131,7 @@
         <div id="contact" class="container-fluid">
           {% include "contact.html" %}
         </div>
+        {% endblock %}
       </div>
    </body>
   </html>
