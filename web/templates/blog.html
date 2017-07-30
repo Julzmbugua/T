@@ -4,20 +4,23 @@
 {% block content %}
 
 {% block blog_entries %}
-<div class="container-fluid bg-2 text-center">	    
-	{% for object in object_list %}
-
+	    
+	
+<div class="container-fluid bg-2 text-center">
 	<div class="row">
+{% for object in object_list %}
+	
 		<div class="col-sm-6">
 			<div class="card">
-				<h2><a href="detail/{{object.id}}/">{{ object.blog_title }}</a> </h2>
+				<h1><a href="detail/{{object.id}}/" class="btn">{{ object.blog_title }}</a> </h1>
 				<p class ="meta">{{ object.created }} </p>
-				{{ object.blog_content|markdown|safe }}
+				<p>{{ object.blog_content|markdown|safe|slice:":200"}}</p>
+				<a href="detail/{{object.id}}/" class="btn">  <span class="glyphicon glyphicon-book" aria-hidden="true"></span> Read More</a>
 			</div>
 		</div>
-
+	
 {% endfor %}
 	</div>
-{% endblock %}
 </div>
+{% endblock %}
 {% endblock%}
