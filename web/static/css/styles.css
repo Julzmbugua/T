@@ -420,6 +420,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 }
 /*cards for the portfolio*/
 .card {
+  overflow: hidden;
   /*position: relative;*/
   height: 600px;
     /* Add shadows to create the "card" effect */
@@ -435,7 +436,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
 
 /* Add some padding inside the card container */
 .card-container {
-  min-height: 1400px !important;
+  /*min-height: 1400px !important;*/
   /*position: absolute;*/
   padding: 33px 56px !important;
 }
