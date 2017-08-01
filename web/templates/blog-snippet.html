@@ -1,0 +1,24 @@
+{% load django_markdown %}
+{% block content %}
+
+{% block blog_entries %}
+	    
+	
+<div class="container-fluid bg-3 text-center">
+	<h2 class="margin">My latest blogs</h2>
+	<div class="row">
+{% for object in queryset %}
+		<div class="col-sm-4">
+			<div class="card">				
+				<p><a href="detail/{{object.id}}/" class="btn">{{ object.blog_content|markdown|safe|slice:":200"}}</a></p>
+				<h1><a href="detail/{{object.id}}/" class="btn">{{ object.blog_title }}</a> </h1>
+				<p class ="meta">{{ object.created|date:"M d, Y" }} </p>
+
+			</div>
+		</div>
+	
+{% endfor %}
+	</div>
+</div>
+{% endblock %}
+{% endblock%}
