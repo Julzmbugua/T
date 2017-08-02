@@ -1,17 +1,16 @@
 {% load django_markdown %}
 {% block content %}
-
 {% block blog_entries %}
 	    
 	
 <div class="container-fluid bg-3 text-center">
-	<h2 class="margin">My latest blogs</h2>
+	<h2 class="margin">MY LATEST BLOG POST</h2>
 	<div class="row">
 {% for object in queryset %}
 		<div class="col-sm-4">
 			<div class="card">				
-				<p><a href="detail/{{object.id}}/" class="btn">{{ object.blog_content|markdown|safe|slice:":200"}}</a></p>
-				<h1><a href="detail/{{object.id}}/" class="btn">{{ object.blog_title }}</a> </h1>
+				<p><a href="blog/detail/{{object.id}}/" class="btn"><img style="width:300px; height:400px" src="{{ object.blog_header.url }}"</a></p>
+				<h1><a href="blog/detail/{{object.id}}/" class="btn">{{ object.blog_title }}</a> </h1>
 				<p class ="meta">{{ object.created|date:"M d, Y" }} </p>
 
 			</div>

@@ -42,7 +42,7 @@ def homepage(request):
 		'graphic_item_1': graphic_item_1,
 		'graphic_item_2': graphic_item_2,
 		'experience_list': experience_list,
-        'queryset':queryset,
+       		'queryset':queryset,
 		}
 	return render(request, 'layout.html', context)
 def base(request):

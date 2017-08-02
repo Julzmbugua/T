@@ -61,21 +61,21 @@ class CarouselCover(models.Model):
 class BlogQuerySet(models.QuerySet):
 	def published(self):
 		return self.filter(publish=True)
+	def __str__(self):
+		return self.blog_title + '-' + self.blog_content + '-' + self.blog_header.url
+ 
 class Blog(models.Model):
-    blog_title = models.CharField(max_length=100)
-    blog_content = MarkdownField()
-    slug = models.SlugField(max_length=200, unique=True)
-    publish = models.BooleanField(default=True)
-    created = models.DateTimeField(auto_now_add=True)
-    modified = models.DateTimeField(auto_now=True)
-
-    objects = BlogQuerySet.as_manager()
-
-    def __str__(self):
-		return self.blog_title + '-' + self.blog_content
-    class Meta:
-        verbose_name = "Blog Entry"
-        verbose_name_plural = "Blog Entries"
-        ordering = ["-created"]
-    def get_absolute_url(self):
-    	return reverse('web:blog-detail', kwargs={'pk':self.pk})
+	blog_title = models.CharField(max_length=100)
+	blog_header = models.ImageField(storage=fs)
+	blog_content = MarkdownField()
+	slug = models.SlugField(max_length=200, unique=True)
+	publish = models.BooleanField(default=True)
+	created = models.DateTimeField(auto_now_add=True)
+	modified = models.DateTimeField(auto_now=True)
+	objects = BlogQuerySet.as_manager()
+	class Meta:
+		verbose_name = "Blog Entry"
+		verbose_name_plural = "Blog Entries"
+		ordering = ["-created"]
+	def get_absolute_url(self):
+            return reverse('web:blog-detail', kwargs={'pk':self.pk})
