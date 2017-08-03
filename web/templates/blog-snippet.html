@@ -9,7 +9,7 @@
 {% for object in queryset %}
 		<div class="col-sm-4">
 			<div class="card">				
-				<p><a href="blog/detail/{{object.id}}/" class="btn"><img style="width:300px; height:400px" src="{{ object.blog_header.url }}"</a></p>
+				<p><a href="blog/detail/{{object.id}}/" class="btn"><img style="width:100%; height:240px; position: relative;" src="{{ object.blog_header.url }}"</a></p>
 				<h1><a href="blog/detail/{{object.id}}/" class="btn">{{ object.blog_title }}</a> </h1>
 				<p class ="meta">{{ object.created|date:"M d, Y" }} </p>
 
