@@ -1,63 +1,20 @@
-  {% load static %}
+{% load static %}
 <div class="container-fluid bg-3 text-center">
-  <h3 class="margin">PORTFOLIO</h3>
+	<div class="row">	
+		<div class="col-sm-4">
+			<div class="center">
+  				<div class="imgBox">
+	        		<img src="{{ graphic_item.graphic.url }}">
+	       			 <div class="container">
+	       			 	<div class="content">
+				  			<h1> {{ graphic_item.site_name }}</h1><br>
+				  			<p> <a href="{{graphic_item.site_urls}}" class="btn btn-portfolio"> VISIT SITE</p>
 
-  <div class="row">
-    <div class="col-sm-4">
-      <div class="card">
-        <div class="carousel-inner carousel-portfolio" role="listbox">
-           <div class="item active">
-              <img style = "width: 400px; height: 230px;" src="{{ graphic_item.graphic.url }}">
-                <div class="carousel-caption carousel-portfolio-caption">
-                 <p style="font-size: 28px;"> {{graphic_item.site_name}} </p>
-                       <hr class="border-grey" style="margin:auto;width:20%">
-                       <!-- <br> -->
-
-                   <p> <a href="{{graphic_item.site_url}}" class="btn btn-portfolio"> VISIT SITE </a></p>
-                </div>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-
-    <div class="col-sm-4">
-      <div class="card">
-        <div class="carousel-inner carousel-portfolio" role="listbox">
-           <div class="item active">
-              <img style = "width: 400px; height: 230px;" src="{{ graphic_item_1.graphic.url }}">
-                <div class="carousel-caption carousel-portfolio-caption">
-                 <p style="font-size: 28px;"> {{ graphic_item_1.site_name }} </p>
-                       <hr class="border-grey" style="margin:auto;width:20%">
-                       <!-- <br> -->
-
-                   <p> <a href="{{graphic_item_1.site_url}}" class="btn btn-portfolio"> VISIT SITE </a></p>
-                </div>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-
-    <div class="col-sm-4">
-      <div class="card">
-        <div class="carousel-inner carousel-portfolio" role="listbox">
-           <div class="item active">
-              <img style = "width: 400px; height: 230px;" src="{{ graphic_item_2.graphic.url }}">
-                <div class="carousel-caption carousel-portfolio-caption">
-                 <p style="font-size: 28px;"> {{ graphic_item_2.site_name }} </p>
-                       <hr class="border-grey" style="margin:auto;width:20%">
-                       <!-- <br> -->
-
-                   <p> <a href="{{ graphic_item_2.site_url }}" class="btn btn-portfolio"> VISIT SITE </a></p>
-                </div>
-          </div>
-        </div>
-        
-
-      </div>
-    </div>
-  </div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+	
+	</div>
 </div>
-
-
