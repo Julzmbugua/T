@@ -1,15 +1,30 @@
 {% load staticfiles %}
 {% block content %}
-<div class="container-fluid bg-1 text-center">
-	<div class="about">
-		<h3 class="margin"> MY PASSION AND PERSONALITY</h3>
-		<hr class="border-grey" style="margin:auto;width:20%;color:#000"><br>
-		<img src="{% static 'about/T.jpg' %}" class="img-responsive img-circle margin" style="display:inline" alt="Bird" width="300" height="300">
-		
-	  	<p>{{ bio_desc.description }}</p>
-	</div>
+<!--Card-->
+<!--Card-->
+
+<div class="card d-lg-flex" style="background-color: #fff">
+
+    <!--Bacground color-->
+    <div class="card-img-top" style="background-color: blue; height: 10rem" alt="Card image cap">
+    </div>
+
+    <!--Avatar-->
+    
+
+    <div class="card-body text-primary text-center">
+    <div class="avatar"><img src="{% static 'about/T.jpg' %}" class="rounded-circle" style="margin-top: -6rem; padding: 3px; background-color:#fff ; height: 10rem;">
+    </div>
+        <!--Name-->
+        <h4 class="card-title">My Passion and Personality</h4>
+        <hr>
+        <!--Quotation-->
+        <p><i class="fa fa-quote-left"></i> {{ bio_desc.description }} </p>
+    </div>
 
 </div>
-{% endblock %}
+
+
+{% endblock %} 
 
 		

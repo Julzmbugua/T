@@ -1,31 +1,31 @@
-{% extends "base.html" %}
-{% load static %}
-<!-- {% load django_markdown %} -->
-{% block title %} Blog {% endblock %}
+{% extends "web/blog_list.html" %}
 
 {% block content %}
-<div class="container-fluid bg-1" style="text-align: justify;">
-	<div id="blog">
-		<!-- <h3 class="margin"> BLOG </h3> -->
-		<hr class="border" style="margin:auto;width:20%;color:#fff"><br>
-		<h2 style="text-align: center;">{{object.blog_title}}</h2>
-		<p class ="meta" style="text-align: center;">{{ object.created }} </p>
-		<div class="blog-content" style="text-align: justify">{{ object.blog_content|markdown }}</div>
-
-	</div>
-
-</div>
-
-
-
+{% load django_markdown %}
 
 {% block blog_entries %}
-{% for object in object_list %}
-<div class="post">
-	<h2>{{ object.blog_title }} </h2>
-	<p class ="meta">{{ object.created }} </p>
-	
+      
+  
+<div class="card">
+  <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Slides/img%20(116).jpg" height="400" alt="Card image">
 </div>
-{% endfor %}
+  
+    <div class="card d-lg-flex" style="margin-top: -50px; width:90%; margin-left: 5%; height: 150px">
+        <div class="card-body text-center">
+          <h2 class="card-title"><a> {{ object.blog_title }}</a></h2>
+          <h6 class="card-subtitle mb-2 text-muted">Written on, {{ object.created }}</h6>
+        </div>
+
+  </div>
+
+           <!--Excerpt-->
+<div class="text-justify w-90 ml-5 mr-5" id="blog">
+                <p>{{ object.blog_content|markdown|safe }}</p>
+            </div>
 {% endblock %}
-{% endblock %}
+{% endblock%}
+
+
+
+
+

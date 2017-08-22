@@ -14,11 +14,15 @@
 }
 
 .web {
-  filter: grayscale(60);
+  /*filter: grayscale(20);*/
 
   font-family: 'Josefin Sans', sans-serif;
+  /*display: flex;*/
 }
-.huge_caption {font-size: 100px !important; font-weight: bold;}
+li {
+  display: inline;
+}
+.huge_caption {font-family: 'gooddogregular'; font-size: 100px !important; font-weight: bold;}
 
 @keyframes fadein {
     from {
@@ -47,79 +51,7 @@
 
 /*NAVIGATION BAR*/
 
-.navbar {
-  margin-top: 25px;
-  background: transparent!important;
-  border: none !important;
-}
-.navbar-visible {
-  padding: 5px;
-  margin-top: 0;
-  font-weight: bold !important;
-  /*min-height: 80px !important;*/
-  opacity: 0.;
-  background-color: #fff !important;
-  /*border: none !important;*/
-  /*font-size: 23px !important;*/
-  border-bottom: solid;
-  box-shadow: 0 2px 3px rgba(0,0,0,.1);
-}
-.navbar-base {
-  padding: 5px;
-  margin-top: 0;
-  font-weight: bold !important;
-  /*min-height: 80px !important;*/
-  opacity: 0.;
-  background-color: #fff !important;
-  /*border: none !important;*/
-  /*font-size: 23px !important;*/
-  color: #000 !important;
-  border-bottom: solid;
-  box-shadow: 0 2px 3px rgba(0,0,0,.1);
-}
- .navbar-base li > a {
-  color: #000!important;
-  
-}
-.navbar li > a {
-  color: #fff!important;
-}
-.navbar-visible li > a {
-  color: #000!important;
-}
-.navbar .navbar-nav > .active > a {
-  border-bottom: solid;
-  background-color: transparent !important;
-}
-.navbar-brand {
-  font-family: gooddogregular;
-  font-size: 2em !important;
-}
-.navbar .navbar-brand {
-  color: #fff!important;
-}
-.navbar-visible .navbar-brand {
-  color: #000 !important;
 
-}
-
-.navbar-toggle {
-  border: none !important;
-  color: #000 !important;
-  float: left !important;
-}
-.navbar .icon-bar {
-  height: 4px !important;
-  background-color: #fff !important;
-}
-.navbar-visible .icon-bar {
-  height: 4px !important;
-  background-color: #000 !important;
-}
-.navbar-toggle:hover {
-  background: none !important;
-  border: none !important
-}
 
 /*CAROUSEL*/
 
@@ -137,7 +69,7 @@
 }
 
 .blur-back {
-  background: rgba(0,0,0,0.9);
+  background: rgba(0,0,0,0.7);
   width: 100%;
   min-height: 650px;
   position: absolute;
@@ -175,7 +107,7 @@
   .resume-content {
     font-size: 16px;
   }
-  .navbar {
+  /*.navbar {
   margin-top: 0;
   background: transparent!important;
   border-bottom: solid;
@@ -199,7 +131,7 @@
   }
 
   .navbar-collapse {
-    background-color: #fff !important;
+    background-color: #fff !importan*/t;
 
   }
   .btn {
@@ -222,13 +154,14 @@
 /*PORTFOLIO CAROUSEL*/
 
 .imgBox {
-  position: absolute;
+  position: relative;
   width: 400px;
   height: 200px;
   background-size: cover;
   /*border: 2px solid #fff;*/
   background-position: center;
   overflow: hidden;
+  text-align: center;
 }
 .imgBox img {
   width: 100%;
@@ -237,7 +170,8 @@
 }
 .container {
   position: absolute;
-  padding: 70px;
+  left: 0;
+  right: 0;
   top: 0;
   width: 100%;
   height:100%;
@@ -245,19 +179,19 @@
   transition: .5s;
   /*padding: 100px;*/
 }
-.content > p {
-  position: absolute;
-  padding: 0px 140px;
+.content > h1 {
   color: #fff;
-  font-size: 1.5em;
+  text-align: center;
+  font-size: 18px;
   transition: .5s;
   transform: scale(2);
   opacity: 0;
 
 }
-.content > h1 {
+.content > p {
   position: absolute;
-  padding: 70px 10px;
+  text-align: center !important;
+  /*padding: 40px 130px;*/
   color: #fff;
   font-size: 1.5em;
   transition: .5s;
@@ -370,16 +304,11 @@ now override the 3.3 new styles for modern browsers & apply opacity
 }
 
 /*PAGES*/
-#home {
-  /*position: absolute;*/
-  /*height: 660px;*/
 
-}
 
-#portfolio, #about, #blog {
-  /*top: 660px;*/
+#portfolio, #about, #blog-snippet {
   position: relative;
-  padding-top:50px;
+  padding:60px;
   min-height:1000px;
   font-size: 16px;
   background-image: no-repeat;
@@ -395,13 +324,13 @@ now override the 3.3 new styles for modern browsers & apply opacity
 }
 
 #about {
-  background-color: #000;
-  color: #fef3f3;
+  background-color: #fff;
+  /*color: #fef3f3;*/
   min-height: 600px;
   
 }
 
-#blog {
+#blog-snippet {
   background-color: #fff;
   color: #000 !important;
 }
@@ -410,7 +339,7 @@ now override the 3.3 new styles for modern browsers & apply opacity
   /* The image used */
    background-image: url("../images/homepage/coding.jpg");
   /* Set a specific height */
-  min-height: 650px;
+  min-height: 400px;
   /*max-height: 600px;*/
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -441,30 +370,6 @@ now override the 3.3 new styles for modern browsers & apply opacity
   font-size:16px;
   color: #f7f7f7;
 }
-
-/*cards for the portfolio*/
-.card {
-  overflow: hidden;
-  position: relative;
-  height:500px;
-    /* Add shadows to create the "card" effect */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  
-}
-
-/* On mouse-over, add a deeper shadow */
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
-
-/* Add some padding inside the card container */
-.card-container {
-  min-height: 1400px !important;
-  position: absolute;
-  padding: 0 !important;
-}
-
 
 
 

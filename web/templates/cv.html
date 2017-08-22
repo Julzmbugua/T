@@ -1,0 +1,37 @@
+
+
+
+
+
+<div class="container-fluid bg-2 text-center">
+  <h2 class="section-heading h1 pt-4 text-center"><strong>What I can do</strong></h2>
+  <hr class="border-grey" style="margin:auto;width:20%;color:#000"><br>
+
+  <div class="row">
+      <div class="col-sm-4 text-right">
+      <h3>Day-To-Day Comfort</h3>
+      <div class="list-group" id="myList" role="tablist">
+
+      <!-- <hr class="border-grey" style=""><br> -->
+        {% for i in comfort_item %}
+        <a class="list-group-item list-group-item-action"  data-toggle="list" style="border: none;" href="#home" role="tab"> {{ i.item }}</a>
+        {% endfor %}
+      </div>
+
+    </div>
+    <div class="col-sm-4 text-center">
+    <img class="img-fluid" style="width: 25rem; height: 30rem;" src="https://mdbootstrap.com/img/Others/screens.png" >
+    </div>
+
+    <div class="col-sm-4 text-left  ">
+    <div class="list-group" id="myList" role="tablist">
+
+      <h3>Experience with </h3>
+      <!-- <hr class="border-grey" style=""><br> -->
+      {% for item in experience_list %}
+  		<a class="list-group-item list-group-item-action" data-toggle="list" style="border: none;" href="#home" role="tab">{{ item.entry }}</a>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

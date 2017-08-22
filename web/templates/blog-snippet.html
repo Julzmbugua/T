@@ -4,20 +4,25 @@
 	    
 	
 <div class="container-fluid bg-3 text-center">
-	<h2 class="margin">MY LATEST BLOG POST</h2>
+	<h2 class="margin">My Latest Blog Posts</h2>
 	<div class="row">
-{% for object in queryset %}
-		<div class="col-sm-4">
-			<div class="card">				
-				<p><a href="blog/detail/{{object.id}}/" class="btn"><img style="width:100%; height:240px; position: relative;" src="{{ object.blog_header.url }}"</a></p>
-				<h1><a href="blog/detail/{{object.id}}/" class="btn">{{ object.blog_title }}</a> </h1>
-				<p class ="meta">{{ object.created|date:"M d, Y" }} </p>
-
+		{% for object in queryset %}
+		<div class="col-lg-4 col-sm-12 mb-r">
+			 <div class="card card-inverse">
+	  		<img class="card-img-top" src="{{ object.blog_header.url }}" alt="Card image cap" style="height: 300px">
+	  		<div class="card-block">
+	    		<h5 class="card-title py-3">{{ object.blog_title |upper }}</h5>
+	    		<p class ="card-text text-muted">{{ object.created|date:"M d, Y" }} </p>
 			</div>
-		</div>
-	
-{% endfor %}
+	  		</div>
+		</div>	
+		{% endfor %}
 	</div>
 </div>
+	
 {% endblock %}
 {% endblock%}
+<br>
+<div class="d-flex justify-content-center">
+	    <a class="btn btn-outline-primary btn-lg" href="{% url 'web:blog' %}"><i class="fa fa-clone left"></i> VIEW MORE BLOGS</a>
+	</div>
