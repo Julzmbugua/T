@@ -3,10 +3,7 @@
 /*font for the whole site*/
 @font-face {
     font-family: 'gooddogregular';
-    src: url('GoodDog-webfont.eot');
-    src: url('GoodDog-webfont.eot?#iefix') format('embedded-opentype'),
-         url('GoodDog-webfont.woff') format('woff'),
-         url('GoodDog-webfont.ttf') format('truetype'),
+    src: url('GoodDog-webfont.ttf') format('truetype'),
          url('GoodDog-webfont.svg#gooddogregular') format('svg');
     font-weight: normal;
     font-style: normal;
@@ -22,7 +19,7 @@
 li {
   display: inline;
 }
-.huge_caption {font-family: 'gooddogregular'; font-size: 100px !important; font-weight: bold;}
+.huge_caption {font-family: 'gooddogregular'; font-size: 4rem !important; font-weight: bold;}
 
 @keyframes fadein {
     from {
@@ -56,9 +53,9 @@ li {
 /*CAROUSEL*/
 
 
-.carousel .item {
+.carousel .carousel-item {
 
-  min-height: 650px;
+  /*min-height: 650px;*/
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -71,8 +68,8 @@ li {
 .blur-back {
   background: rgba(0,0,0,0.7);
   width: 100%;
-  min-height: 650px;
-  position: absolute;
+  height: 100%;
+  /*position: absolute;*/
   /*margin-left: -15px*/
 }
 
@@ -138,7 +135,7 @@ li {
   padding: 5px 22px !important;
   font-size: 6px;
   }
-  .huge_caption {font-size: 50px !important}
+  .huge_caption {}
 
   .carousel-portfolio img {
     -webkit-filter: blur(2px);
@@ -304,42 +301,33 @@ now override the 3.3 new styles for modern browsers & apply opacity
 }
 
 /*PAGES*/
-
-
-#portfolio, #about, #blog-snippet {
-  position: relative;
-  padding:60px;
-  min-height:1000px;
-  font-size: 16px;
-  background-image: no-repeat;
-  background-size: 100%;
-  margin: auto;
- }
-.col-sm-4 {
-  padding: 50px;
+.rgba-black-strong {
+  background-color:rgba(0,0,0,.7)!important;
 }
-#portfolio {
-  background-color: #fff;
-  color: #000;
+/*@media (min-width:992px){.mb-r{margin-bottom:3rem!important}}
+.mb-r{margin-bottom:2rem!important}}
+*/
+@media (min-width:992px){.mb-r{margin-bottom:3rem!important}}@media (max-width:992px){.hidden-md-down{display:none!important}.mb-r{margin-bottom:2rem!important}}
+/*cards for the blogs*/
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
 }
 
-#about {
-  background-color: #fff;
-  /*color: #fef3f3;*/
-  min-height: 600px;
-  
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
-
-#blog-snippet {
-  background-color: #fff;
-  color: #000 !important;
+p {
+  font-size: 0.9rem;
 }
 
 .parallax {
   /* The image used */
-   background-image: url("../images/homepage/coding.jpg");
+   /*background-image: url("../images/homepage/coding.jpg");*/
   /* Set a specific height */
-  min-height: 400px;
+  /*min-height: 400px;*/
   /*max-height: 600px;*/
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -352,23 +340,24 @@ now override the 3.3 new styles for modern browsers & apply opacity
   background: rgba(0,0,0,0.9);
   width: 100%;
   min-height: 650px;
-  position: absolute;
-  margin-left: -15px;
+  /*position: absolute;*/
+  /*margin: 0;*/
+  /*margin-left: -15px;*/
 }
 
 .resume-content li {
-  margin-top: 20px;
+  /*margin-top: 20px;*/
   background-color:transparent;
-  text-align: center;
-  font-size:16px;
-  color: #f7f7f7;
+  /*text-align: center;*/
+  /*font-size:16px;*/
+  /*color: #f7f7f7;*/
 }
 .resume-content h3 {
-  margin-top: 20px;
+  /*margin-top: 20px;*/
   background-color:transparent;
-  text-align: center;
-  font-size:16px;
-  color: #f7f7f7;
+  /*text-align: center;*/
+  /*font-size:16px;*/
+  /*color: #f7f7f7;*/
 }
 
 
@@ -379,12 +368,11 @@ now override the 3.3 new styles for modern browsers & apply opacity
   padding:10px;
   /*min-height: 1200px;*/
   max-height:300px;
-  background-color: #000;
+  background-color: #2f4f4f;
   color: #fff;
   font-size: 20px !important;
   background-image: no-repeat;
   /*filter: grayscale(60);*/
   background-size: 100%;
-  margin: auto;
+  /*margin: auto;*/
  }
-

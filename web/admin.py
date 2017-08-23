@@ -18,7 +18,7 @@ class CarouselCoverAdmin(admin.ModelAdmin):
 
 class BlogAdmin(MarkdownModelAdmin):
 	list_display = ('blog_title', 'blog_content','created')
-        prepopulated_fields = {'slug': ('blog_title',)}
+	prepopulated_fields = {'slug': ('blog_title',)}
 
 
 admin.site.register(CarouselCaption, CarouselCaptionAdmin)

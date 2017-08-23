@@ -1,15 +1,18 @@
 {% load static %}
 
-
-
-  <div class="text-center">
-
-    <!--Section heading-->
-    <h3 class="card-title py-2 font-bold font-italic"><strong>Have a App idea and need help from an expert?</strong></h3>  
-    <h1 class="section-heading h1 pt-4 "><strong>HIRE A WEB APP DEVELOPER TODAY</strong></h1>
-
-    <a class="btn btn-outline-primary btn-lg" href="{% url 'web:blog' %}"><i class="fa fa-clone left"></i> CONTACT ME TODAY</a>
-      </div>
+<div class="parallax" style="background-image: url({{cover_img_1.cover.url}});">
+    <div class="container-fluid rgba-black-strong" style="min-height: 450px;">
+	    <div class="d-flex mb-r text-center text-white pt-5"">
+		  	<div class="container-fluid pt-5">
+			    <!--Section heading-->
+			    <p class="font-bold font-italic pt-5"  style="font-family: 'gooddogregular'; font-size: 2rem;"><strong>Have a App idea and need help from an expert?</strong></p>  
+			    <h1 class="section-heading h1 text-muted"><strong>HIRE A WEB APP DEVELOPER TODAY</strong></h1>
+			    <div class="p">
+			    	<a class="btn btn-outline-primary btn-lg pb-3" href="{% url 'web:blog' %}"><i class="fa fa-clone left"></i> CONTACT ME TODAY</a>
+			    </div>
+		    </div>
+		</div>
+	</div>
 </div>
 
 

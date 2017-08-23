@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
         <link rel="stylesheet" href="{% static 'css/bootstrap-reboot.css' %}">
         <link rel="stylesheet" href="{% static 'css/bootstrap-grid.css' %}">
-        <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+        <!-- <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}"> -->
 
 
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
@@ -19,118 +19,104 @@
         <script src="{% static 'js/web.js' %}"></script>
     </head>
 
-    <body class="web" data-spy="scroll" data-target="#navbarSupportedContent" data-offset="100">
+    <body class="web p-0" data-spy="scroll" data-target="#navbarSupportedContent" data-offset="100">
       
     	<div class="navbar navbar-dark bg-transparent navbar-toggleable-md navbar-light bg-faded fixed-top" role="navigation">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto text-primary">
-      <li class="nav-item active"><a class="nav-link" href="{% url 'web:homepage' %}">Home <span class="sr-only">(current)</span></a></li>
-      <li class="nav-item "><a class="nav-link" href="{% url 'web:homepage' %}#about" data-toggle="collapse" data-target=".navbar-collapse.show">About <span class="sr-only">(current)</span></a></li>
-      <li class="nav-item "><a class="nav-link" href="{% url 'web:homepage' %}#resume">Resume <span class="sr-only">(current)</span></a></li>
-      <li class="nav-item "><a class="nav-link" href="{% url 'web:homepage' %}#portfolio">Portfolio <span class="sr-only">(current)</span></a></li>
-      <li class="nav-item "><a class="nav-link" href="{% url 'web:blog' %}">Blog <span class="sr-only">(current)</span></a></li>
-      <li class="nav-item "><a class="nav-link" href="{% url 'web:homepage' %}#contact">Contact <span class="sr-only">(current)</span></a></li>
-    </ul>
-    <button type="button" class="close" aria-label="Close">
-  <span aria-hidden="true">&times;</span>
-</button>
-  </div>    
-
-      </div>
-        {% block content %}
-        <!-- HOME -->
-        <div id="home" class="carousel slide carousel-fade" data-ride="carousel" >
-
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                <li data-target="#home" data-slide-to="0" class="active"></li>
-                <li data-target="#home" data-slide-to="1"></li>
-                <li data-target="#home" data-slide-to="2"></li>
-              </ol>
-
-              <!-- Wrapper for slides -->
-              <div class="carousel-inner">
-                <div class="carousel-item item active item-1" style="background-image: url({{cover_img.cover.url}});">
-                  <!-- <img src="{{ cover_img.cover.url }}"> -->
-
-                  <div class="blur-back">
-                    <div class="carousel-caption">
-                    <p class="huge_caption">{{ caption_item.caption }}</p>
-                    <p style="font-size: 15px !important; font-style: italic;">{{ caption_item_1.caption }} . {{ caption_item_2.caption }} . {{ caption_item_3.caption }}</p>
-
-
-                                          <!-- <hr class="border-grey" style="margin:auto;width:20%"><br> -->
-                     <a href="#portfolio" class="btn btn-outline-secondary btn-lg" role="button">EXPLORE MY PORTFOLIO</a>
-                  </div>
-                </div>
-                    
-                  </div>
-                  
-                <div class="carousel-item item item-2" style="background-image: url({{cover_img_1.cover.url}})">
-                  <div class="blur-back">
-
-                    <div class="carousel-caption">
-                      <p>{{ caption_item_3.caption }}</p>
-                      <!-- <hr class="border-grey" style="margin:auto;width:20%"><br> -->
-                      <p> <a href="#portfolio" class="btn btn-outline-secondary btn-lg"> EXPLORE MY PORTFOLIO </a></p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="carousel-item item item-3" style="background-image: url({{cover_img_2.cover.url}});">
-                  <div class="blur-back">
-
-                    <div class="carousel-caption">
-                      <p>{{ caption_item_2.caption }}</p>
-                      <!-- <hr class="border-grey" style="margin:auto;width:20%"><br> -->
-                      <p> <a href="#portfolio" class="btn btn-outline-secondary btn-lg"> EXPLORE MY PORTFOLIO </a></p>
-                    </div>
-                    </div>
-                </div>
-              </div>
-              </div>
-              
-
-         <!-- ABOUT -->
-        <div id="about" class="container-fluid">
-          {% include "about.html" %}
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto text-primary">
+            <li class="nav-item active"><a class="nav-link" href="{% url 'web:homepage' %}">Home <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item "><a class="nav-link" href="{% url 'web:homepage' %}#about" data-toggle="collapse" data-target=".navbar-collapse.show">About <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item "><a class="nav-link" href="{% url 'web:homepage' %}#resume">Resume <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item "><a class="nav-link" href="{% url 'web:homepage' %}#portfolio">Portfolio <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item "><a class="nav-link" href="{% url 'web:blog' %}">Blog <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item "><a class="nav-link" href="{% url 'web:homepage' %}#contact">Contact <span class="sr-only">(current)</span></a></li>
+          </ul>
+          <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
-        <div class="parallax">
-          <div id="resume" class="container-fluid">
-            <div class="resume-content">
-              {% include "resume.html" %}
+      </div>
+      {% block content %}
+      <!-- HOME -->
+      <div id="home" class="carousel slide carousel-fade" data-ride="carousel" >
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#home" data-slide-to="0" class="active"></li>
+          <li data-target="#home" data-slide-to="1"></li>
+          <li data-target="#home" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides #1 -->
+        <div class="carousel-inner">
+          <div class="carousel-item item active" style="background-image: url({{cover_img_1.cover.url}}); height: 550px;">
+            <div class="blur-back">
+              <div class="carousel-caption d-flex mb-r text-center text-white pb-5">
+                <div class="container-fluid pb-5">
+                  <p class="huge_caption">{{ caption_item_1.caption }}</p>
+                  <p style="font-size: 15px !important; font-style: italic;">{{ caption_item_1.caption }} . {{ caption_item_2.caption }} . {{ caption_item_3.caption }}</p>
+                  <!-- <hr class="border-grey" style="margin:auto;width:20%"><br> -->
+                  <p> <a href="#portfolio" class="btn btn-outline-secondary btn-sm p-3"> EXPLORE MY PORTFOLIO </a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- Wrapper for slides #2 -->
+          <div class="carousel-item item" style="background-image: url({{cover_img_1.cover.url}}); height: 550px;">
+            <div class="blur-back">
+              <div class="carousel-caption d-flex mb-r text-center text-white pb-5">
+                <div class="container-fluid pb-5">
+                  <p class="huge_caption">{{ caption_item_2.caption }}</p>
+                  <!-- <hr class="border-grey" style="margin:auto;width:20%"><br> -->
+                  <p> <a href="#portfolio" class="btn btn-outline-secondary btn-sm p-3"> EXPLORE MY PORTFOLIO </a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Wrapper for slides #3 -->
+          <div class="carousel-item item" style="background-image: url({{cover_img_1.cover.url}}); height: 550px;">
+            <div class="blur-back">
+              <div class="carousel-caption d-flex mb-r text-center text-white pb-5">
+                <div class="container-fluid pb-5">
+                  <p class="huge_caption">{{ caption_item_3.caption }}</p>
+                  <!-- <hr class="border-grey" style="margin:auto;width:20%"><br> -->
+                  <p> <a href="#portfolio" class="btn btn-outline-secondary btn-sm p-3"> EXPLORE MY PORTFOLIO </a></p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <!-- RESUME -->
-        <div id="about" class="container-fluid">
+      </div>
+      <!-- ABOUT -->
+      <div id="about p-1">
+        <div class="container-fluid">
+            {% include "about.html" %}
+        </div>
+      </div>
+      <!-- PRE-RESUME -->
+      <div id="pre-resume">
+        {% include "resume.html" %}
+      </div>
+      <!-- RESUME -->
+      <div id="about p-1">
+        <div class="container-fluid">
           {% include "cv.html" %}
         </div>
-        </div>
-
-
-          <!-- PORTFOLIO -->
-
-
-        <div id="portfolio" class="container-fluid">
+      </div>
+       <!-- PORTFOLIO -->
+      <div id="portfolio p-1">
+        <div class="container-fluid">
           {% include "portfolio.html" %}
         </div>
-
-          <!-- BLOG -->
-	<div id ="blog-snippet" class="container-fluid">
-		{% include "blog-snippet.html" %}
-	</div>
-
-
-              <!-- CONTACT -->
-        <div id="contact" class="container-fluid">
-          {% include "contact.html" %}
-        </div>
-        {% endblock %}
       </div>
-   </body>
-  </html>
+      <!-- BLOG -->
+      <div id="blog-snippet p-1">
+        <div class="container-fluid">
+          {% include "blog-snippet.html" %}
+        </div>
+      </div>
+      <!-- CONTACT -->
+      <div id="contact" class="container-fluid">
+        {% include "contact.html" %}
+      </div>
+    {% endblock %}
+  </body>
+</html>

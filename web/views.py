@@ -27,7 +27,7 @@ def homepage(request):
 	graphic_item_1 = PortfolioGraphic.objects.get(graphic_no=1)
 	graphic_item_2 = PortfolioGraphic.objects.get(graphic_no=2)
 	# Blog-Preview
-        queryset = Blog.objects.published()[:3]
+	queryset = Blog.objects.published()[:3]
 	context = {
 		'cover_img': cover_img,
 		'cover_img_1': cover_img_1,
@@ -42,7 +42,7 @@ def homepage(request):
 		'graphic_item_1': graphic_item_1,
 		'graphic_item_2': graphic_item_2,
 		'experience_list': experience_list,
-       		'queryset':queryset,
+		'queryset':queryset,
 		}
 	return render(request, 'layout.html', context)
 def base(request):

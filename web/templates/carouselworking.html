@@ -1,0 +1,90 @@
+<div id="home" class="carousel slide carousel-fade" data-ride="carousel" >
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#home" data-slide-to="0" class="active"></li>
+          <li data-target="#home" data-slide-to="1"></li>
+          <li data-target="#home" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides #1 -->
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item item active">
+            <!-- <img src="{{ cover_img.cover.url }}"> -->
+            <img class="d-block" style="background-image: url({{cover_img.cover.url}}); height: 550px;" alt="First slide">
+            <div class="blur-back">
+              <div class="carousel-caption d-none d-md-block">
+                <p class="huge_caption">{{ caption_item.caption }}</p>
+                <p style="font-size: 15px !important; font-style: italic;">{{ caption_item_1.caption }} . {{ caption_item_2.caption }} . {{ caption_item_3.caption }}</p>
+                <!-- <hr class="border-grey" style="margin:auto;width:20%"><br> -->
+                <a href="#portfolio" class="btn btn-outline-secondary btn-lg p-3" role="button">EXPLORE MY PORTFOLIO</a>
+              </div>
+            </div>
+          </div>
+                    <!-- Wrapper for slides #2 -->
+          <div class="carousel-item item" style="background-image: url({{cover_img_1.cover.url}}); height: 550px;">
+            <div class="blur-back">
+              <div class="carousel-caption">
+                <p>{{ caption_item_3.caption }}</p>
+                <!-- <hr class="border-grey" style="margin:auto;width:20%"><br> -->
+                <p> <a href="#portfolio" class="btn btn-outline-secondary btn-lg p-3"> EXPLORE MY PORTFOLIO </a></p>
+              </div>
+            </div>
+          </div>
+          <!-- Wrapper for slides #3 -->
+          <div class="carousel-item item" style="background-image: url({{cover_img_2.cover.url}}); height:550px;">
+            <div class="blur-back">
+
+              <div class="carousel-caption">
+                <p>{{ caption_item_2.caption }}</p>
+                <!-- <hr class="border-grey" style="margin:auto;width:20%"><br> -->
+                <p> <a href="#portfolio" class="btn btn-outline-secondary btn-lg p-3"> EXPLORE MY PORTFOLIO </a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <img class="img-fluid" src="..." alt="First slide" style="background-image: url({{cover_img_1.cover.url}}); height: 550px;">
+    </div>
+    <div class="carousel-caption d-none d-md-block">
+    <p>{{ caption_item_2.caption }}</p>
+                <!-- <hr class="border-grey" style="margin:auto;width:20%"><br> -->
+                <p> <a href="#portfolio" class="btn btn-outline-secondary btn-lg p-3"> EXPLORE MY PORTFOLIO </a></p>
+  </div>
+
+    <div class="carousel-item">
+      <img class="d-block img-fluid" src="..." alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block img-fluid" src="..." alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
