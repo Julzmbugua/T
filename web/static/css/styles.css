@@ -10,6 +10,12 @@
 
 }
 
+
+.cover-img, img {
+  filter: grayscale(20);
+
+}
+
 .web {
   /*filter: grayscale(20);*/
 
@@ -18,6 +24,9 @@
 }
 li {
   display: inline;
+}
+a {
+  text-decoration: none !important;
 }
 .huge_caption {font-family: 'gooddogregular'; font-size: 4rem !important; font-weight: bold;}
 
@@ -321,6 +330,9 @@ now override the 3.3 new styles for modern browsers & apply opacity
 }
 p {
   font-size: 0.9rem;
+}
+a {
+  
 }
 
 .parallax {

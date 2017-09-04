@@ -4,10 +4,13 @@
 {% block content %}
 
 {% block blog_entries %}
-<div class="d-flex justify-content-center mb-r text-center pt-5">
+
+
+
+<div class="d-flex justify-content-center mb-r text-center p-5">
 	    
-<div id="blog-snippet p-1">
-	<div class="container-fluid">
+<div id="container-fluid px-5">
+	<div class="container-fluid px-5">
 		<div class="row">
 		{% for object in object_list %}
 			<div class="col-lg-4 col-md-12">
@@ -31,5 +34,205 @@
 </div>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {% endblock %}
 {% endblock%}
+
+<div class="row">
+  <div class="col-12 col-sm-6 col-md-4">
+    <div class="card">
+      <div class="card-block">
+        <h3 class="card-title">Special title treatment</h3>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-4">
+    <div class="card">
+      <div class="card-block">
+        <h3 class="card-title">Special title treatment</h3>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-4">
+    <div class="card">
+      <div class="card-block">
+        <h3 class="card-title">Special title treatment</h3>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-12 col-sm-6 col-md-4">
+    <div class="card">
+      <div class="card-block">
+        <h3 class="card-title">Special title treatment</h3>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+<div class="container-fluid">
+<div class="row">
+  <div class="col-4">.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9
+  </div>
+  <div class="col-8">
+	  <div class="col-4">.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9
+	  </div>
+	  <div class="col-4">.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9.col-9
+	  </div>
+  </div>
+ 
+</div>
+	    
+	  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid">
+	<div class="row">
+	    <div class="col-lg-4">
+	    	<div>
+				<div class="card d-lg-flex mb-r">
+					<div class="card-img-top">
+						<img style="width:100%;height: 300px;" src="{{ object.blog_header.url }}">
+						<div class="card-body" href="detail/{{object.id}}/">
+							
+							<h5><a class="pt-1" href="detail/{{object.id}}/">{{ object.blog_title|upper }}</a> </h5>
+							<p class ="">{{ object_c.created }}</p>
+							<p class=""> {{ object.blog_content|markdown|safe|slice:"100"}}</p>
+							<p class="pb-2"><a href="detail/{{object.id}}/" class="btn btn-outline-primary"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Read More</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+	    </div>
+	    <div class="col">
+	    	<div class="container-fluid"></div>
+		    <div class="row" >
+			    {% for object in object_list %}
+			<div class="col-lg-4 col-md-12">
+				<div class="card d-lg-flex mb-r">
+					<div class="card-img-top">
+						<img style="width:100%;height: 300px;" src="{{ object.blog_header.url }}">
+						<div class="card-body" href="detail/{{object.id}}/">
+							
+							<h5><a class="pt-1" href="detail/{{object.id}}/">{{ object.blog_title|upper }}</a> </h5>
+							<p class ="">{{ object.created }}</p>
+							<p class=""> {{ object.blog_content|markdown|safe|slice:"100"}}</p>
+							<p class="pb-2"><a href="detail/{{object.id}}/" class="btn btn-outline-primary"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Read More</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		{% endfor %}
+			</div>
+	    </div>
+   </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

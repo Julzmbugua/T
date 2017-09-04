@@ -8,13 +8,15 @@
 	<div class="row">
 		{% for object in queryset %}
 		<div class="col-lg-4 col-sm-12 mb-r">
-			 <div class="card card-inverse">
-	  		<img class="card-img-top" src="{{ object.blog_header.url }}" alt="Card image cap" style="height: 300px">
-	  		<div class="card-block">
-	    		<h5 class="card-title py-3">{{ object.blog_title |upper }}</h5>
-	    		<p class ="card-text text-muted">{{ object.created|date:"M d, Y" }} </p>
-			</div>
+			<a href="blog/detail/{{object.id}}/">
+			<div class="card card-inverse">
+		  		<img class="card-img-top" src="{{ object.blog_header.url }}" alt="Card image cap" style="height: 300px">
+		  		<div class="card-block">
+		    		<h5 class="card-title py-3">{{ object.blog_title |upper }}</h5>
+		    		<p class ="card-text text-muted">{{ object.created|date:"M d, Y" }} </p>
+				</div>
 	  		</div>
+	  		</a>
 		</div>	
 		{% endfor %}
 	</div>
