@@ -156,36 +156,28 @@ a {
     visibility: visible;
   }
 }
+.mdb-lightbox figure img:hover{opacity:.8}.mdb-lightbox.no-margin [class*=col-]{padding:0}
 
 /*PORTFOLIO CAROUSEL*/
-
-.imgBox {
+.card-image {
   position: relative;
-  width: 400px;
-  height: 200px;
-  background-size: cover;
+  height: 25rem;
   /*border: 2px solid #fff;*/
   background-position: center;
+  background-size: cover !important;
   overflow: hidden;
-  text-align: center;
 }
-.imgBox img {
-  width: 100%;
-  height: 100%;
-  transition: .5s;
-}
+
 .container {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
+  position: relative;
   width: 100%;
   height:100%;
+  text-align: center;
   background: transparent;
   transition: .5s;
   /*padding: 100px;*/
 }
-.content > h1 {
+.content > h3 {
   color: #fff;
   text-align: center;
   font-size: 18px;
@@ -195,9 +187,7 @@ a {
 
 }
 .content > p {
-  position: absolute;
-  text-align: center !important;
-  /*padding: 40px 130px;*/
+  /*position: absolute;*/
   color: #fff;
   font-size: 1.5em;
   transition: .5s;
@@ -210,19 +200,16 @@ a {
 
 
 
-.imgBox:hover .container p {
+.card-image:hover .container p {
   transform: scale(1);
-  /*text-align: center;*/
   opacity: 1;
 }
-.imgBox:hover .container h1 {
+.card-image:hover .container h3 {
   transform: scale(1);
-  /*text-align: center;*/
   opacity: 1;
 }
-.imgBox:hover .container {
-  background: rgba(0,0,0,0.9);
-;
+.card-image:hover .container {
+  background: rgba(0,0,0,0.7);
 }
 
 /*.imgBox:hover img {
@@ -286,6 +273,9 @@ now override the 3.3 new styles for modern browsers & apply opacity
 }
 
 
+.devicons {
+  font-size: 5rem;
+}
 /*BUTTONS*/
 
 .btn-carousel, .btn-portfolio {
@@ -388,3 +378,83 @@ a {
   background-size: 100%;
   /*margin: auto;*/
  }
+
+
+ .no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.service-box {
+  max-width: 400px;
+  margin: 50px auto 0;
+}
+@media (min-width: 992px) {
+  .service-box {
+    margin: 20px auto 0;
+  }
+}
+.service-box p {
+  margin-bottom: 0;
+}
+
+.portfolio-box {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+
+}
+.portfolio-box .portfolio-box-caption {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  opacity: 0;
+  color: white;  
+  background: rgba(0, 0, 0, 0.9);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+
+
+  transform: translateY(-50%);
+  text-align: center;
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+  padding: 0 15px;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+}
+.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+  font-size: 18px;
+
+}
+.portfolio-box:hover .portfolio-box-caption {
+  opacity: 1;
+  transform: scale(1);
+}
+.portfolio-box:focus {
+  outline: none;
+}
+@media (min-width: 768px) {
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    font-size: 16px;
+  }
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
+    font-size: 22px;
+  }
+}

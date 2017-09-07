@@ -20,12 +20,12 @@ def homepage(request):
 	#About
 	bio_desc = About.objects.order_by('publish_date')[0]
 	#Resume
-	comfort_item = Comfort.objects.all()
-	experience_list = ExperienceWith.objects.all()
+	skill_list = Resume.objects.all()
 	# Portfolio
 	graphic_item = PortfolioGraphic.objects.get(graphic_no=0)
 	graphic_item_1 = PortfolioGraphic.objects.get(graphic_no=1)
 	graphic_item_2 = PortfolioGraphic.objects.get(graphic_no=2)
+	pictures = Picture.objects.all()
 	# Blog-Preview
 	queryset = Blog.objects.published()[:3]
 	context = {
@@ -37,11 +37,11 @@ def homepage(request):
 		'caption_item_2': caption_item_2,
 		'caption_item_3': caption_item_3,
 		'bio_desc': bio_desc,
-		'comfort_item': comfort_item,
+		'skill_list': skill_list,
 		'graphic_item': graphic_item,
 		'graphic_item_1': graphic_item_1,
 		'graphic_item_2': graphic_item_2,
-		'experience_list': experience_list,
+		'pictures':pictures,
 		'queryset':queryset,
 		}
 	return render(request, 'layout.html', context)

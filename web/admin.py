@@ -11,20 +11,28 @@ class CarouselCaptionAdmin(admin.ModelAdmin):
 	list_display = ('caption', 'caption_no', 'publish_date')		
 
 class PortfolioGraphicAdmin(admin.ModelAdmin):
-	list_display = ('site_name', 'site_url', 'graphic', 'graphic_no', 'upload_date')		
+	list_display = ('site_name', 'site_url', 'graphic', 'graphic_no', 'upload_date')	
+class PictureAdmin(admin.ModelAdmin):
+	list_display = ('picture_name', 'picture_url', 'picture', 'picture_no', 'upload_date')		
 
 class CarouselCoverAdmin(admin.ModelAdmin):
 	list_display = ('alt', 'upload_date', 'slide')
+	
+class ResumeAdmin(admin.ModelAdmin):
+	list_display = ('skill_icon', 'skill', 'skill_desc', 'experienced')
 
 class BlogAdmin(MarkdownModelAdmin):
 	list_display = ('blog_title', 'blog_content','created')
 	prepopulated_fields = {'slug': ('blog_title',)}
 
 
+
+
 admin.site.register(CarouselCaption, CarouselCaptionAdmin)
 admin.site.register(About)
-admin.site.register(Comfort)
-admin.site.register(ExperienceWith)
+admin.site.register(Picture)
+
+admin.site.register(Resume)
 admin.site.register(PortfolioGraphic, PortfolioGraphicAdmin)
 admin.site.register(CarouselCover, CarouselCoverAdmin)
 admin.site.register(Blog, BlogAdmin)

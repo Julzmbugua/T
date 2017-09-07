@@ -25,19 +25,16 @@ class About(models.Model):
 		return self.description
 
 
-class Comfort(models.Model):
-	item = models.CharField(max_length=100)
-	entry_date = models.DateField()
+
+class Resume(models.Model):
+	skill_icon = models.CharField(max_length=100)
+	skill = models.CharField(max_length=100)
+	skill_desc = models.CharField(max_length=150)
+	experienced = models.BooleanField(default=True)
+	created = models.DateField(auto_now=True)
 
 	def __str__(self):
-		return self.item
-
-class ExperienceWith(models.Model):
-	entry = models.CharField(max_length=100)
-	entry_date = models.DateField()
-
-	def __str__(self):
-		return self.entry
+		return self.skill
 
 class PortfolioGraphic(models.Model):
 	site_name = models.CharField(max_length=100)
@@ -48,6 +45,16 @@ class PortfolioGraphic(models.Model):
 
 	def __str__(self):
 		return self.graphic.url
+class Picture(models.Model):
+	picture_name = models.CharField(max_length=100)
+	picture = models.ImageField(storage = fs)
+	picture_url = models.URLField(max_length=100, blank=True)
+	picture_no = models.IntegerField(unique=True, blank=True)
+	upload_date = models.DateTimeField(auto_now=True)
+
+	def __str__(self):
+		return self.picture.url
+
 
 class CarouselCover(models.Model):
 	alt = models.CharField(max_length=10)
