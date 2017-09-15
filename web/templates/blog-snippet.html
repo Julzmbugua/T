@@ -1,36 +1,73 @@
-{% load django_markdown %}
-{% block content %}
-{% block blog_entries %}
-	    
-	
-<div class="container-fluid bg-3 text-center">
-	<div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading">Latest Blog Posts</h2>
-            <hr class="primary">
-          </div>
-        </div>
-	<div class="row">
-		{% for object in queryset %}
-		<div class="col-lg-4 col-sm-12 mb-r">
-			<a href="blog/detail/{{object.id}}/">
-			<div class="card card-inverse">
-		  		<img class="card-img-top" src="{{ object.blog_header.url }}" alt="Card image cap" style="height: 300px">
-		  		<div class="card-block">
-		    		<h5 class="card-title py-3">{{ object.blog_title |upper }}</h5>
-		    		<p class ="card-text text-muted">{{ object.created|date:"M d, Y" }} </p>
-				</div>
-	  		</div>
-	  		</a>
-		</div>	
-		{% endfor %}
+{% load static %}
+	<head>
+	</head>
+	<!-- Begin Featured
+	================================================== -->
+	<section class="featured-posts">
+	<div class="section-title">
+		<h2><span>Latest Stories</span></h2>
 	</div>
-</div>
-	
-{% endblock %}
-{% endblock%}
-<br>
+	<div class="row listfeaturedtag">
+
+		<!-- begin post -->
+		{% for object in queryset %}
+		<div class="col-lg-6">
+		<div class="card">
+			<div class="row">
+				<div class="col-md-5 wrapthumbnail">
+					<a href="blog/detail/{{object.id}}/">
+						<div class="thumbnail" style="background-image:url({{ object.blog_header.url }});">
+						</div>
+					</a>
+				</div>
+				<div class="col-md-7">
+					<div class="card-block">
+						<h2 class="card-title py-2"><a href="detail/">{{ object.blog_title }}</a></h2>
+						<h4 class="card-text">this is supposed to be the content of a card this is supposed to be the content of a card this is supposed to be the content of a card this is supposed to be the content of a card</h4>
+						<div class="metafooter">
+							<div class="wrapfooter">
+								<span class="meta-footer-thumb">
+								<a href="author.html"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+								</span>
+								<span class="author-meta">
+								<span class="post-name"><a href="author.html">T</a></span><br/>
+								<span class="post-date">{{ object.created|date:"M d, Y" }}</span><span class="dot"></span><span class="post-read">6 min read</span>
+								</span>
+								<span class="post-read-more"><a href="post.html" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		{% endfor %}
+
+		<!-- end post -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+	</div>
+	</section>
+
+	<br>
 <div class="d-flex justify-content-center mb-r">
 	    <a class="btn btn-outline-primary btn-lg p-3" href="{% url 'web:blog' %}"><i class="fa fa-clone left"></i> VIEW MORE BLOGS</a>
 	</div>

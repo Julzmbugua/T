@@ -1,21 +1,26 @@
-from django.forms import ModelForm
-from .models import *
+# from django.forms import ModelForm
+# from django import forms
+# from tinymce.widgets import TinyMCE
+# from ckeditor.widgets import CKEditorWidget
+# from ckeditor.fields import RichTextFormField
 
-class BlogForm(ModelForm):
-	class Meta:
-		model = Blog
-		fields = [
-		'blog_title',
-		'blog_content',
-                'publish',
-                'slug',		
-		]
+# from .models import *
+
+# # class BlogForm(ModelForm):
+# # 	class Meta:
+# # 		model = Blog
+# # 		fields = [
+# # 		'blog_title',
+# # 		'blog_content',
+# #                 'publish',
+# #                 'slug',		
+# # 		]
 
 
 
-# class BlogForm(forms.Form):
+# class BlogForm(forms.ModelForm):
 #     blog_title = forms.CharField(label='Blog Title', max_length=100)
-#     blog_content = forms.TextField(label = 'What is on your mind?', max_length=1000)
+#     content = forms.CharField(widget=CKEditorWidget())
 #     publish_date = forms.DateTimeField()
     
 

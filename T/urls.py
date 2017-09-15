@@ -22,6 +22,9 @@ from web import views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('web.urls', namespace='web')),
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
+
+    url(r'^tinymce/', include("tinymce.urls")),
     url(r'^markdown/', include("django_markdown.urls")),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

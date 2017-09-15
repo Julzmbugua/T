@@ -4,6 +4,8 @@ from django.urls import reverse
 from django.db import models
 from django.core.files.storage import FileSystemStorage
 from django_markdown.models import MarkdownField
+from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 fs = FileSystemStorage(location='web/media/')
@@ -18,7 +20,7 @@ class CarouselCaption(models.Model):
 		return self.caption
 
 class About(models.Model):
-	description = models.CharField(max_length=500)
+	description = RichTextField()
 	publish_date = models.DateField()
 
 	def __str__(self):
@@ -74,7 +76,7 @@ class BlogQuerySet(models.QuerySet):
 class Blog(models.Model):
 	blog_title = models.CharField(max_length=100)
 	blog_header = models.ImageField(storage=fs)
-	blog_content = MarkdownField()
+	blog_content = RichTextField()
 	slug = models.SlugField(max_length=200, unique=True)
 	publish = models.BooleanField(default=True)
 	created = models.DateTimeField(auto_now_add=True)

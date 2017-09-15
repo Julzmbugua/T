@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'tinymce',
+    'ckeditor',
+    'ckeditor_uploader',
     'django_markdown',
 ]
 
@@ -56,7 +59,7 @@ ROOT_URLCONF = 'T.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['web/templates/web'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,7 +74,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'T.wsgi.application'
 
-
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': [["Format", "Bold", "Italic", "Underline", "Strike", "SpellChecker"],
+                ['NumberedList', 'BulletedList', "Indent", "Outdent", 'JustifyLeft', 'JustifyCenter',
+                 'JustifyRight', 'JustifyBlock'],
+                ["Image", "Table", "Link", "Unlink", "Anchor", "SectionLink", "Subscript", "Superscript"], ['Undo', 'Redo'], ["Source", "Code"],
+                ["Maximize"]],
+        
+    }
+}
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 # DATABASES = {
@@ -118,10 +130,15 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+# ckeditor
+
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
+
+CKEDITOR_UPLOAD_PATH = "uploads/"
+
 
 STATIC_URL = '/static/'
 # STATICFILES_DIRS = [

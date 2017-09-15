@@ -18,9 +18,8 @@ height: 10rem" alt="Card image cap">
     </div>
         <!--Name-->
         <h4 class="card-title">My Passion and Personality</h4>
-        <hr>
         <!--Quotation-->
-        <p><i class="fa fa-quote-left"></i> {{ bio_desc.description }} </p>
+        <i class="fa fa-quote-left"></i> {{ bio_desc.description|safe }} 
     </div>
 
 </div>

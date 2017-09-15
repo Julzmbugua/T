@@ -47,18 +47,18 @@
 
 {% load static %}
 
-<section class="section p-0">
+<section class="section">
 
     <!--Section heading-->
     <h2 class="section-heading h1 pt-4 text-center"><strong>My Latest Projects</strong></h2>
     
-
+    <div class="container-fluid p-0">
     <!--Grid row-->
     <div class="row">
 
         <!--Grid column-->
-        <div class="col-sm-4 mb-r">
-            <div class="card card-image" style="background-image: url({{graphic_item.graphic.url}}); background-size: cover; background-position: center; height: 25rem;">
+        <div class="col-sm-4">
+            <div class="card-image no-gutter" style="background-image: url({{graphic_item.graphic.url}}); background-size: cover; background-position: center; height: 25rem;">
                 <div class="container px-5 text-white d-flex align-items-center">
                     <div class="px-5">
                     <div class="content px-5">
@@ -73,8 +73,8 @@
         <!--Grid column-->
 
         <!--Grid column-->
-        <div class="col-sm-4 mb-r">
-            <div class="card card-image" style="background-image: url({{graphic_item.graphic.url}}); background-size: cover; background-position: center; height: 25rem;">
+        <div class="col-sm-4">
+            <div class="card-image no-gutter" style="background-image: url({{graphic_item.graphic.url}}); background-size: cover; background-position: center; height: 25rem;">
                 <div class="container px-5 text-white d-flex align-items-center">
                     <div class="px-5">
                     <div class="content px-5">
@@ -89,8 +89,8 @@
         <!--Grid column-->
 
         <!--Grid column-->
-        <div class="col-sm-4 mb-r">
-            <div class="card card-image" style="background-image: url({{graphic_item.graphxic.url}}); background-size: cover; background-position: center; height: 25rem;">
+        <div class="col-sm-4">
+            <div class="card-image" style="background-image: url({{graphic_item.graphic.url}}); background-size: cover; background-position: center; height: 25rem;">
                 <div class="container px-5 text-white d-flex align-items-center">
                     <div class="px-5">
                     <div class="content px-5">
@@ -106,6 +106,7 @@
 
     </div>
     <!--Grid row-->
+    </div>
 
    
 

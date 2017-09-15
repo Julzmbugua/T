@@ -27,7 +27,7 @@ def homepage(request):
 	graphic_item_2 = PortfolioGraphic.objects.get(graphic_no=2)
 	pictures = Picture.objects.all()
 	# Blog-Preview
-	queryset = Blog.objects.published()[:3]
+	queryset = Blog.objects.published()[:2]
 	context = {
 		'cover_img': cover_img,
 		'cover_img_1': cover_img_1,
@@ -50,11 +50,7 @@ def base(request):
 
 class BlogCreate(CreateView):
 	model = Blog
-	fields = [
-		'blog_title',
-		'blog_content',
-		'created'
-		]
+	fields = ['blog_title','blog_content']
 class BlogUpdate(UpdateView):
 	model = Blog
 	fields = ['blog_title', 'blog_content', 'publish_date']
@@ -69,3 +65,8 @@ class BlogDetailView(DetailView):
 	def get_object(self):
 		object = super(BlogDetailView, self).get_object()
 		return object
+# class ContactView(FormView):
+# 	template_name = 'blogg.html'
+# 	form_class = BlogForm
+# 	success_url = '/blog/'
+# 		

@@ -1,78 +1,15 @@
-<!-- <section class="p-0" id="portfolio">
-    <div class="container-fluid">
-
-<div class="row no-gutter">
- 
 
 
-    
-            <figure class="col-lg-4 col-sm-6">
-                <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(117).jpg" data-size="1600x1067">
-                    <img src="http://127.0.0.1:8000/Screenshot_2016-08-31-14-45-43_com.instagram.android_1472643991269_ntcDx98.jpg" class="img-fluid">
-                </a>
-            </figure>
-
-            <figure class="col-md-4 px-0">
-                <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(98).jpg" data-size="1600x1067">
-                    <img src="http://127.0.0.1:8000/Screenshot_2016-08-31-14-45-43_com.instagram.android_1472643991269_ntcDx98.jpg" class="img-fluid" />
-                </a>
-            </figure>
-
-            <figure class="col-md-4 px-0">
-                <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(131).jpg" data-size="1600x1067">
-                    <img src="http://127.0.0.1:8000/Screenshot_2016-08-31-14-45-43_com.instagram.android_1472643991269_ntcDx98.jpg" class="img-fluid" />
-                </a>
-            </figure>
-
-            <figure class="col-md-4 px-0">
-                <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(123).jpg" data-size="1600x1067">
-                    <img src="http://127.0.0.1:8000/Screenshot_2016-08-31-14-45-43_com.instagram.android_1472643991269_ntcDx98.jpg" class="img-fluid" />
-                </a>
-            </figure>
-
-            <figure class="col-md-4 px-0">
-                <a href="http://127.0.0.1:8000/Screenshot_2016-08-31-14-45-43_com.instagram.android_1472643991269_ntcDx98.jpgizontal/Nature/12-col/img%20(118).jpg" data-size="1600x1067">
-                    <img src="http://127.0.0.1:8000/tito_on_imac.jpg" class="img-fluid" />
-                </a>
-            </figure>
-
-            <figure class="col-md-4 px-0">
-                <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(128).jpg" data-size="1600x1067">
-                    <img src="http://127.0.0.1:8000/Screenshot_2016-08-31-14-45-43_com.instagram.android_1472643991269_ntcDx98.jpg" class="img-fluid" />
-                </a>
-            </figure>
-
-            <figure class="col-md-4 px-0">
-                <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(132).jpg" data-size="1600x1067">
-                    <img src="http://127.0.0.1:8000/tito_on_imac.jpg" class="img-fluid" />
-                </a>
-            </figure>
-
-            <figure class="col-md-4 px-0">
-                <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(115).jpg" data-size="1600x1067">
-                    <img src="http://127.0.0.1:8000/tito_on_imac.jpg" class="img-fluid" />
-                </a>
-            </figure>
-
-            <figure class="col-md-4 px-0">
-                <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(133).jpg" data-size="1600x1067">
-                    <img src="http://127.0.0.1:8000/tito_on_imac.jpg" class="img-fluid" />
-                </a>
-            </figure>
-
-
-
-    </div>
-    </div>
-    </section> -->
 <section class="p-0" id="portfolio">
-    <h2 class="section-heading h1 pt-4 text-center"><strong></strong></h2>
-    <div class="container-fluid">
+  <div class="section-title">
+    <h2><span>Gallery</span></h2>
+  </div>
+    <div class="container-fluid p-0">
         <div class="row no-gutter popup-gallery">
         {% for picture in pictures %}
             <div class="col-lg-4 col-sm-6">
                 <a class="portfolio-box" href="https://s3.us-east-2.amazonaws.com/portfolio96/RandQuoteGen.jpg" alt="the-lens-cap">
-              <img class="img-fluid" src="{{picture.picture.url}}" style="max-height: 35rem; width: 35rem;" alt="the-lens-cap">
+              <img class="img-fluid" src="{{picture.picture.url}}" style="max-height: 35rem; width: 100%;" alt="the-lens-cap">
               <div class="portfolio-box-caption">
                 <div class="portfolio-box-caption-content">
                   <div class="project-category text-faded">
