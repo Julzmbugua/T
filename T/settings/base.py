@@ -74,10 +74,10 @@ WSGI_APPLICATION = 'T.wsgi.application'
 
 CKEDITOR_CONFIGS = {
     'default': {
-        'toolbar': [["Format", "Bold", "Italic", "Underline", "Strike","Code", "SpellChecker"],
+        'toolbar': [["Format", "Bold", "Italic", "Underline", "Strike", "SpellChecker"],
                 ['NumberedList', 'BulletedList', "Indent", "Outdent", 'JustifyLeft', 'JustifyCenter',
                  'JustifyRight', 'JustifyBlock'],
-                ["Image", "Table", "Link", "Unlink", "Anchor", "InsertPre", "SectionLink", "Subscript", "Superscript"], ['Undo', 'Redo'], ["Source", "Code"],
+                ["Image", "Table", "Link", "Unlink", "Anchor", "SectionLink", "Subscript", "Superscript"], ['Undo', 'Redo'], ["Source"],
                 ["Maximize"]],
         
     }
