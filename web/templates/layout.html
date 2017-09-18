@@ -13,19 +13,8 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link href="{% static 'css/mediumish.css' %}" rel="stylesheet">
     <!-- <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}"> -->
-    <script src="{% static 'js/jquery-3.1.1.slim.min.js' %}"></script>
-
-        <!-- <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}"> -->
-
-
-        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-        <script src="{% static 'js/bootstrap.min.js' %}"> </script>
-        <script src="{% static 'js/web.js' %}"></script>
-        <script src="{% static 'js/jquery-3.1.1.slim.min.js' %}"></script>
-                <script src="{% static 'js/mediumish.js' %}"></script>
-                                <script src="{% static 'js/jquery.min.js' %}"></script>
-
-
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+   
     {% endblock %}
 </head>
 
@@ -38,7 +27,7 @@
 <div class="container">
   <!-- Begin Logo -->
   <a class="navbar-brand" href="{% url 'web:homepage' %}">
-  <img src="{% static '' %}" alt="Tito">
+  <img src="{% static '' %}" alt="T">
   </a>
   <!-- End Logo -->
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
@@ -50,13 +39,13 @@
             <li class="nav-item "><a class="nav-link" href="{% url 'web:homepage' %}#portfolio">Portfolio <span class="sr-only">(current)</span></a></li>
             <li class="nav-item "><a class="nav-link" href="{% url 'web:blog' %}">Blog <span class="sr-only">(current)</span></a></li>
             <li class="nav-item "><a class="nav-link" href="{% url 'web:homepage' %}#contact">Contact <span class="sr-only">(current)</span></a></li>
-            <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <!-- <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
                 <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
                     <a class="dropdown-item" href="#">Action</a>
                     <a class="dropdown-item" href="#">Another action</a>
                     <a class="dropdown-item" href="#">Something else here</a>
                 </div>
-            </li>
+            </li> -->
           </ul>
     <!-- End Menu -->
     <!-- Begin Search -->
@@ -167,6 +156,14 @@
 <!-- End AlertBar
 ================================================== -->
     {% endblock %}
+
+
+
+<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'assets/js/ie10-viewport-bug-workaround.js' %}"></script>
+
 </body>
 
 </html>

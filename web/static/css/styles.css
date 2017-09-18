@@ -169,7 +169,7 @@ a {
   background-size: cover !important;
   overflow: hidden;
 }*/
-
+/*
 .container {
   position: relative;
   width: 100%;
@@ -178,7 +178,7 @@ a {
   background: transparent;
   transition: .5s;
   /*padding: 100px;*/
-}
+}*/
 .content > h3 {
   color: #fff;
   text-align: center;
@@ -449,4 +449,9 @@ a {
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     font-size: 22px;
   }
+}
+
+.navbar {
+  background-color: transparent;
+  color: red;
 }

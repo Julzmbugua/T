@@ -2,15 +2,15 @@
 
 $(function() {
   //caches a jQuery object containing the header element
-  var header = $('.navbar');
+  var header = $('.mediumnavigationtransparent');
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
     if (scroll >= 600) {
-      header.removeClass('.navbar').addClass('navbar-visible').fadeIn();
+      header.removeClass('.mediumnavigationtransparent').addClass('.mediumnavigation').fadeIn();
     }
     else {
-      header.removeClass('navbar-visible').addClass('.navbar').fadeIn();
+      header.removeClass('.mediumnavigation').addClass('.mediumnavigationtransparent').fadeIn();
     }
   });
 });
