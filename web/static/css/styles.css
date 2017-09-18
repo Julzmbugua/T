@@ -365,14 +365,11 @@ a {
 
 
 
-#contact {
+#contact #gallery #portfolio #resume #about {
   position: relative;
-  padding:10px;
-  max-height:300px;
-  background-color: #2f4f4f;
-  color: #fff;
-  font-size: 20px !important;
  }
+
+
 
 
  .no-gutter > [class*='col-'] {
@@ -452,9 +449,4 @@ a {
   .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     font-size: 22px;
   }
-}
-
-
-#gallery {
-  max-height: 70rem;
 }
