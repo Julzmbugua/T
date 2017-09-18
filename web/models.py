@@ -3,7 +3,6 @@ import datetime
 from django.urls import reverse
 from django.db import models
 from django.core.files.storage import FileSystemStorage
-from django_markdown.models import MarkdownField
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 
@@ -77,6 +76,11 @@ class Blog(models.Model):
 	blog_title = models.CharField(max_length=100)
 	blog_header = models.ImageField(storage=fs)
 	blog_content = RichTextField()
+	tags = models.CharField(max_length=25)
+	tags1 = models.CharField(max_length=25)
+	tags2 = models.CharField(max_length=25)
+	tags3 = models.CharField(max_length=25)
+
 	slug = models.SlugField(max_length=200, unique=True)
 	publish = models.BooleanField(default=True)
 	created = models.DateTimeField(auto_now_add=True)

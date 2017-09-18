@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <title>T</title>
+<head>{% block head %}
+    <title>{% block title %} Tito Mbugua {% endblock %}</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
@@ -11,15 +11,17 @@
     <script src="{% static 'js/jquery-3.1.1.slim.min.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-    <link href="{% static 'assets/css/mediumish.css' %}" rel="stylesheet">
+    <link href="{% static 'css/mediumish.css' %}" rel="stylesheet">
     <!-- <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}"> -->
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
     <script src="{% static 'js/bootstrap.js' %}">
     </script>
     <script src="{% static 'js/web.js' %}"></script>
+    {% endblock %}
 </head>
 
-<body class="web" data-spy="scroll" data-target="#navbarSupportedContent" data-offset="100">
+<body class="{% block body %} web {% endblock %}" data-spy="scroll" data-target="#navbarSupportedContent" data-offset="100">
+
     <nav class="navbar navbar-toggleable-md navbar-light bg-transparent fixed-top mediumnavigation">
 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
@@ -135,6 +137,26 @@
             {% include "gallery.html" %}
         </div>
     </div>
+    <!-- Begin Footer
+================================================== -->
+
+<!-- Begin AlertBar
+================================================== -->
+<div class="footer">
+    <div class="container text-center">
+        <ul class="links" style="list-style: none; text-decoration-line: none; display: inline;">
+        <li class="link"><a href="#" class="fa fa-google-mail"></a></li>
+        <li class="link "><a href="#" class="fa fa-twitter"></a></li>
+        <li class="link"><a href="#" class="fa fa-instagram"></a></li>
+        <li class="link"><a href="#" class="fa fa-github"></a></li>
+        <li class="link"><a href="#" class="fa fa-linkedin"></a></li>
+      </ul>
+
+      <li style="list-style: none;text-decoration-line: none;"> &copy; 2017 Tito Mbugua - Web Design & Development - All Rights Reserved </li>
+    </div>
+</div>
+<!-- End AlertBar
+================================================== -->
     {% endblock %}
 </body>
 

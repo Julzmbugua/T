@@ -38,10 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tinymce',
     'ckeditor',
     'ckeditor_uploader',
-    'django_markdown',
 ]
 
 MIDDLEWARE = [
@@ -76,10 +74,10 @@ WSGI_APPLICATION = 'T.wsgi.application'
 
 CKEDITOR_CONFIGS = {
     'default': {
-        'toolbar': [["Format", "Bold", "Italic", "Underline", "Strike", "SpellChecker"],
+        'toolbar': [["Format", "Bold", "Italic", "Underline", "Strike","Code", "SpellChecker"],
                 ['NumberedList', 'BulletedList', "Indent", "Outdent", 'JustifyLeft', 'JustifyCenter',
                  'JustifyRight', 'JustifyBlock'],
-                ["Image", "Table", "Link", "Unlink", "Anchor", "SectionLink", "Subscript", "Superscript"], ['Undo', 'Redo'], ["Source", "Code"],
+                ["Image", "Table", "Link", "Unlink", "Anchor", "InsertPre", "SectionLink", "Subscript", "Superscript"], ['Undo', 'Redo'], ["Source", "Code"],
                 ["Maximize"]],
         
     }
@@ -149,6 +147,3 @@ STATIC_ROOT = 'web/static/'
 MEDIA_URL = '/'
 MEDIA_ROOT = 'web/media/'
 
-
-# Markdown
-MARKDOWN_EDITOR_SKIN = 'simple'

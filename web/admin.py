@@ -1,8 +1,5 @@
 from django.contrib import admin
 from .models import *
-from django_markdown.admin import MarkdownModelAdmin
-from django_markdown.widgets import AdminMarkdownWidget
-
 
 
 
@@ -19,7 +16,7 @@ class CarouselCoverAdmin(admin.ModelAdmin):
 class ResumeAdmin(admin.ModelAdmin):
 	list_display = ('skill_icon', 'skill', 'skill_desc', 'experienced')
 
-class BlogAdmin(MarkdownModelAdmin):
+class BlogAdmin(admin.ModelAdmin):
 	list_display = ('blog_title', 'blog_content','created')
 	prepopulated_fields = {'slug': ('blog_title',)}
 class PictureAdmin(admin.ModelAdmin):
