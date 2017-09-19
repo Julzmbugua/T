@@ -2,15 +2,15 @@
 
 $(function() {
   //caches a jQuery object containing the header element
-  var header = $('.mediumnavigationtransparent');
+  var header = $('.mediumnavigation-t');
   $(window).scroll(function() {
     var scroll = $(window).scrollTop();
 
     if (scroll >= 600) {
-      header.removeClass('.mediumnavigationtransparent').addClass('.mediumnavigation').fadeIn();
+      header.removeClass('.mediumnavigation-t').addClass('.mediumnavigation').fadeIn();
     }
     else {
-      header.removeClass('.mediumnavigation').addClass('.mediumnavigationtransparent').fadeIn();
+      header.removeClass('.mediumnavigation').addClass('.mediumnavigation-t').fadeIn();
     }
   });
 });

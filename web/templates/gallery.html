@@ -1,18 +1,22 @@
-<section class="recent-posts p-0">
-    <div class="section-title p-0">
+<section class="recent-posts">
+    <div class="section-title">
         <h2><span>Gallery</span></h2>
     </div>
+        <div class="container-fluid p-5">
+
     <div class="row">
-        <div class="card-columns listrecent p-0">
-            <!-- begin post -->
-            {% for picture in pictures %}
-            <div class="card">
-                <a href="{{picture.picture.url}}">
-        <img class="img-fluid" src="{{picture.picture.url}}" alt="">
-      </a>
+        {% for picture in pictures %}
+        <div class="cover-img" style="background-image: url({{picture.picture.url}});background-size: cover; background-position: center; width: 20rem; height: 15rem; padding-top: 150px">
+            <div class="cardd-image container-fluid full-bg-img flex-center text-center text-white rgba-black-strongg" style="height: 3rem"> 
+                <div class="container-fluid">
+                    <!--Section heading-->
+                    <h3 class="">{{picture.picture_name}}</h3>
+                </div>
             </div>
-            {% endfor %}
-            <!-- end post -->
         </div>
+        {% endfor %}
+        <!-- begin post -->
+        <!-- end post -->
     </div>
+</div>
 </section>

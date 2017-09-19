@@ -14,13 +14,48 @@
     <link href="{% static 'css/mediumish.css' %}" rel="stylesheet">
     <!-- <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}"> -->
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+    <script type="text/javascript">
+          $(function() {
+            //caches a jQuery object containing the header element
+            var header = $('.mediumnavigation-t');
+            $(window).scroll(function() {
+              var scroll = $(window).scrollTop();
+
+              if (scroll >= 600) {
+                header.removeClass('.mediumnavigation-t').addClass('mediumnavigation').fadeIn();
+              }
+              else {
+                header.removeClass('mediumnavigation').addClass('.mediumnavigation-t').fadeIn();
+              }
+            });
+          });
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    
     {% endblock %}
 </head>
 
 <body class="{% block body %} web {% endblock %}" data-spy="scroll" data-target="#navbarSupportedContent" data-offset="100">
 
-    <nav class="navbar navbar-toggleable-md navbar-light bg-transparent fixed-top mediumnavigation">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-transparent fixed-top mediumnavigation-t">
 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
 <span class="navbar-toggler-icon"></span>
 </button>
@@ -65,43 +100,66 @@
           <li data-target="#home" data-slide-to="2"></li>
         </ol> -->
         <!-- Wrapper for slides #1 -->
-        <div class="carousel-inner">
-            <div class="carousel-item item active cover-img" style="background-image: url({{cover_img_1.cover.url}}); height: 600px;">
-                <div class="blur-back">
-                    <div class="carousel-caption d-flex mb-r text-center text-white pb-5">
-                        <div class="container-fluid pb-5">
-                            <p class="huge_caption">{{ caption_item_1.caption }}</p>
-                            <p style="font-size: 15px !important; font-style: italic;">{{ caption_item_1.caption }} . {{ caption_item_2.caption }} . {{ caption_item_3.caption }}</p>
-                            <!-- <hr class="border-grey" style="margin:auto;width:20%"><br> -->
-                            <p> <a href="#portfolio" class="btn btn-outline-secondary btn-sm p-3"> EXPLORE MY PORTFOLIO </a></p>
-                        </div>
-                    </div>
-                </div>
+        <div class="carousel-inner" role="listbox">
+
+        <!-- First slide -->
+        <div class="carousel-item item active view hm-black-light" style="background-image: url({{cover_img_1.cover.url}}); height: 600px">
+
+            <!-- Caption -->
+            <div class="full-bg-img flex-center text-white rgba-black-strong">
+                <ul class="animated col-md-12">
+                    <li>
+                        <h1 class="h1-responsive flex-item">{{ caption_item_2.caption }}</h1>
+                        <li>
+                            <p class="flex-item mb-r">{{ caption_item_1.caption }} . {{ caption_item_2.caption }} . {{ caption_item_3.caption }}</p>
+                        </li>
+                        <li>
+                            <a target="" href="portfolio" class="btn btn-outline-primary btn-md flex-item p-3" rel="nofollow">EXPLORE MY PORTFOLIO </a>
+                        </li>
+                </ul>
             </div>
+            <!-- /.Caption -->
+
+        </div>
+        <!-- /.First slide -->
             <!-- Wrapper for slides #2 -->
-            <div class="carousel-item item cover-img" style="background-image: url({{cover_img_1.cover.url}}); height: 600px;">
-                <div class="blur-back">
-                    <div class="carousel-caption d-flex mb-r text-center text-white pb-5">
-                        <div class="container-fluid pb-5">
-                            <p class="huge_caption">{{ caption_item_2.caption }}</p>
-                            <!-- <hr class="border-grey" style="margin:auto;width:20%"><br> -->
-                            <p> <a href="#portfolio" class="btn btn-outline-secondary btn-sm p-3"> EXPLORE MY PORTFOLIO </a></p>
-                        </div>
-                    </div>
-                </div>
+            <div class="carousel-item item view hm-black-light" style="background-image: url({{cover_img_1.cover.url}}); height: 600px">
+
+            <!-- Caption -->
+            <div class="full-bg-img flex-center text-white rgba-black-strong">
+                <ul class="animated fadeInUp col-md-12">
+                    <li>
+                        <h1 class="h1-responsive flex-item">{{ caption_item_2.caption }}</h1>
+                        <li>
+                            <p class="flex-item mb-r">{{ caption_item_1.caption }} . {{ caption_item_2.caption }} . {{ caption_item_3.caption }}</p>
+                        </li>
+                        <li>
+                            <a target="" href="portfolio" class="btn btn-outline-primary btn-md flex-item p-3" rel="nofollow">EXPLORE MY PORTFOLIO </a>
+                        </li>
+                </ul>
             </div>
+            <!-- /.Caption -->
+
+        </div>
             <!-- Wrapper for slides #3 -->
-            <div class="carousel-item item cover-img" style="background-image: url({{cover_img_1.cover.url}}); height: 600px;">
-                <div class="blur-back">
-                    <div class="carousel-caption d-flex mb-r text-center text-white pb-5">
-                        <div class="container-fluid pb-5">
-                            <p class="huge_caption">{{ caption_item_3.caption }}</p>
-                            <!-- <hr class="border-grey" style="margin:auto;width:20%"><br> -->
-                            <p> <a href="#portfolio" class="btn btn-outline-secondary btn-sm p-3"> EXPLORE MY PORTFOLIO </a></p>
-                        </div>
-                    </div>
-                </div>
+            <div class="carousel-item item view hm-black-light" style="background-image: url({{cover_img_1.cover.url}}); height: 600px">
+
+            <!-- Caption -->
+            <div class="full-bg-img flex-center text-white rgba-black-strong">
+                <ul class="animated fadeInUp col-md-12">
+                    <li>
+                        <h1 class="h1-responsive flex-item">{{ caption_item_2.caption }}</h1>
+                        <li>
+                            <p class="flex-item mb-r">{{ caption_item_1.caption }} . {{ caption_item_2.caption }} . {{ caption_item_3.caption }}</p>
+                        </li>
+                        <li>
+                            <a target="" href="portfolio" class="btn btn-outline-primary btn-md flex-item p-3" rel="nofollow">EXPLORE MY PORTFOLIO </a>
+                        </li>
+                </ul>
             </div>
+            <!-- /.Caption -->
+
+        </div>
         </div>
     </div>
     <!-- ABOUT -->
@@ -131,9 +189,7 @@
         </div>
     </div>
     <div id="gallery" style="">
-        <div class="container-fluid">
             {% include "gallery.html" %}
-        </div>
     </div>
     <!-- Begin Footer
 ================================================== -->
